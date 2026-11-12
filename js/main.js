@@ -431,6 +431,34 @@ function initPartsCatalogue() {
     });
   }
 
+  // Hero Quick Search Form Sync (Spare Parts Hero)
+  const heroSearchForm = document.getElementById('hero-parts-search-form');
+  const heroSearchInput = document.getElementById('hero-parts-search-input');
+  if (heroSearchForm && heroSearchInput) {
+    heroSearchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      searchQuery = heroSearchInput.value.trim();
+      if (searchInput) searchInput.value = searchQuery;
+      filterCards();
+      const target = document.getElementById('parts-catalogue');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
+
+  // Hero Category Quick-Launcher Cards
+  document.querySelectorAll('[data-hero-part-cat]').forEach(link => {
+    link.addEventListener('click', () => {
+      const cat = link.dataset.heroPartCat;
+      const matchingChip = document.querySelector(`[data-parts-cat="${cat}"]`);
+      if (matchingChip) {
+        matchingChip.click();
+      } else {
+        currentCategory = cat;
+        filterCards();
+      }
+    });
+  });
+
   // In-stock Checkbox
   if (inStockCheck) {
     inStockCheck.addEventListener('change', (e) => {
