@@ -5,6 +5,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeAndDirection();
+  initNavbarDropdowns();
   initMobileDrawer();
   initHeroCarousel();
   initHome2HeroCarousel();
@@ -82,7 +83,67 @@ function initThemeAndDirection() {
 }
 
 /* ---------------------------------------------------------
-   2. Mobile Drawer Navigation
+   2. Desktop & Mobile Navbar Dropdown Submenus
+   --------------------------------------------------------- */
+function initNavbarDropdowns() {
+  const desktopDropdowns = document.querySelectorAll('.nav-item-has-dropdown');
+  const mobileGroups = document.querySelectorAll('.mobile-nav-group');
+
+  desktopDropdowns.forEach(item => {
+    const trigger = item.querySelector('.nav-dropdown-trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const willOpen = !item.classList.contains('open');
+
+      desktopDropdowns.forEach(other => {
+        other.classList.remove('open');
+        const otherTrigger = other.querySelector('.nav-dropdown-trigger');
+        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+      });
+
+      if (willOpen) {
+        item.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-has-dropdown')) {
+      desktopDropdowns.forEach(item => {
+        item.classList.remove('open');
+        const trigger = item.querySelector('.nav-dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      desktopDropdowns.forEach(item => {
+        item.classList.remove('open');
+        const trigger = item.querySelector('.nav-dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  mobileGroups.forEach(group => {
+    const toggle = group.querySelector('.mobile-submenu-toggle');
+    if (!toggle) return;
+
+    toggle.addEventListener('click', () => {
+      const isOpen = group.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+}
+
+/* ---------------------------------------------------------
+   3. Mobile Drawer Navigation
    --------------------------------------------------------- */
 function initMobileDrawer() {
   const openBtn = document.querySelector('.mobile-menu-button');

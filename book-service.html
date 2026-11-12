@@ -59,12 +59,32 @@
       </a>
 
       <nav class="main-nav" aria-label="Main Navigation">
-        <a href="index.html">Home</a>
-        <a href="home-2.html">Home 2</a>
-        <a href="services.html">Services</a>
-        <a href="spare-parts.html">Spare Parts</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="contact.html">Contact</a>
+        <ul class="nav-list">
+          <li class="nav-item nav-item-has-dropdown">
+            <button type="button" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-dropdown" aria-label="Home pages">
+              <li>
+                <a href="index.html" class="nav-dropdown-link">
+                  <span class="nav-dropdown-title">Home 1</span>
+                  <span class="nav-dropdown-desc">Workshop &amp; Slide Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="home-2.html" class="nav-dropdown-link">
+                  <span class="nav-dropdown-title">Home 2</span>
+                  <span class="nav-dropdown-desc">Precision Atelier Showcase</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="spare-parts.html" class="nav-link">Spare Parts</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
 
       <div class="nav-actions">
@@ -88,15 +108,23 @@
   <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
     <div class="mobile-drawer-header">
       <a href="index.html" class="brand">
-        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 36px;" />
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 42px;" />
       </a>
       <button class="icon-button mobile-drawer-close" aria-label="Close menu">
         <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
     </div>
     <nav class="mobile-nav-links">
-      <a href="index.html">Home <span>→</span></a>
-      <a href="home-2.html">Home 2 <span>→</span></a>
+      <div class="mobile-nav-group">
+        <button type="button" class="mobile-submenu-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i class="fa-solid fa-chevron-down mobile-submenu-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="mobile-submenu">
+          <a href="index.html" class="mobile-submenu-link">Home 1 <span>→</span></a>
+          <a href="home-2.html" class="mobile-submenu-link">Home 2 <span>→</span></a>
+        </div>
+      </div>
       <a href="services.html">Services <span>→</span></a>
       <a href="spare-parts.html">Spare Parts <span>→</span></a>
       <a href="pricing.html">Pricing <span>→</span></a>
