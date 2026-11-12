@@ -236,23 +236,23 @@ h4 { font-size: 1.2rem; }
   box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
-/* Secondary Button (Universal Surface Card Button) */
+/* Secondary Button (Cohesive Soft Brand Blue Surface) */
 .button-secondary,
 .button-hero-secondary,
 .button-outline-white {
-  background-color: #FFFFFF !important;
-  color: #0F172A !important;
-  border: 1.5px solid #CBD5E1 !important;
-  box-shadow: 0 2px 6px rgba(20, 45, 78, 0.05);
+  background: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  border: 1.5px solid #BFDBFE !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.1);
 }
 
 .button-secondary:hover,
 .button-hero-secondary:hover,
 .button-outline-white:hover {
-  background-color: #F8FAFC !important;
-  border-color: #2563EB !important;
-  color: #2563EB !important;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.15);
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3);
   transform: translateY(-2px);
 }
 
@@ -260,50 +260,50 @@ h4 { font-size: 1.2rem; }
 .button-hero-secondary:active,
 .button-outline-white:active {
   transform: translateY(0);
-  box-shadow: 0 1px 4px rgba(20, 45, 78, 0.05);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
 }
 
 /* Dark Theme Secondary Buttons */
 html[data-theme="dark"] .button-secondary,
 html[data-theme="dark"] .button-hero-secondary,
 html[data-theme="dark"] .button-outline-white {
-  background-color: #101B2E !important;
-  color: #FFFFFF !important;
-  border: 1.5px solid rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background: rgba(37, 99, 235, 0.16) !important;
+  color: #93C5FD !important;
+  border: 1.5px solid rgba(59, 130, 246, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
 }
 
 html[data-theme="dark"] .button-secondary:hover,
 html[data-theme="dark"] .button-hero-secondary:hover,
 html[data-theme="dark"] .button-outline-white:hover {
-  background-color: #16243D !important;
-  border-color: #3B82F6 !important;
-  color: #60A5FA !important;
-  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+  border-color: transparent !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.4);
   transform: translateY(-2px);
 }
 
-/* WhatsApp Action Button (Standardized Geometry & Elevation) */
+/* WhatsApp & Action Buttons (Unified Brand Blue Button Styling) */
 .button-whatsapp,
 .button-success {
-  background: #25D366 !important;
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
   color: #FFFFFF !important;
   border: 1.5px solid transparent !important;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
 .button-whatsapp:hover,
 .button-success:hover {
-  background: #20BD5A !important;
+  background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%) !important;
   color: #FFFFFF !important;
-  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 22px rgba(37, 99, 235, 0.45);
   transform: translateY(-2px);
 }
 
 .button-whatsapp:active,
 .button-success:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 /* Brand Navy Accent Button */
