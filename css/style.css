@@ -18,11 +18,11 @@
   --status-yellow: #F59E0B;
 
   /* Theme Surfaces (Light Default) */
-  --bg-body: #F8FAFC;
+  --bg-body: #EFF4FB;
   --bg-surface: #FFFFFF;
-  --bg-surface-alt: #F1F5F9;
+  --bg-surface-alt: #EFF4FB;
   --bg-surface-elevated: #FFFFFF;
-  --border-light: #E2E8F0;
+  --border-light: #DCE6F5;
   --border-focus: #3B82F6;
   
   /* Text */
@@ -93,7 +93,83 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Global Single-Color Animated Ambient Backdrop Across Entire Site */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+body::before {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.16) 0%, transparent 42%),
+    radial-gradient(circle at 82% 76%, rgba(14, 165, 233, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 52% 45%, rgba(99, 102, 241, 0.08) 0%, transparent 50%);
+  animation: ambientFloatA 16s ease-in-out infinite alternate;
+}
+
+body::after {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.11) 1.2px, transparent 1.2px);
+  background-size: 32px 32px;
+  opacity: 0.75;
+  animation: ambientGridDrift 26s linear infinite;
+}
+
+html[data-theme="dark"] body::before {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(37, 99, 235, 0.14) 0%, transparent 46%),
+    radial-gradient(circle at 82% 76%, rgba(14, 165, 233, 0.10) 0%, transparent 48%);
+}
+
+html[data-theme="dark"] body::after {
+  background-image: radial-gradient(rgba(59, 130, 246, 0.14) 1px, transparent 1px);
+  opacity: 0.45;
+}
+
+header,
+main,
+footer,
+.mobile-drawer,
+.sticky-mobile-bar {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes ambientFloatA {
+  0% {
+    transform: translate3d(-2%, -1.5%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2.5%, 1.8%, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(-1.5%, 2.5%, 0) scale(0.98);
+  }
+}
+
+@keyframes ambientGridDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(32px, 32px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .bg-mechanical-grid {
+    animation: none !important;
+  }
 }
 
 /* RTL Support */
@@ -1108,13 +1184,11 @@ body[dir="rtl"] .toast-notice {
 /* Universal Cinematic Hero Stage (Adaptive Light & Dark Modes) */
 .hero-automotive-stage {
   position: relative;
-  background-color: #F8FAFC !important;
-  background-image: radial-gradient(circle at 85% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 50%),
-                    radial-gradient(circle at 10% 80%, rgba(14, 165, 233, 0.06) 0%, transparent 45%),
-                    linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%) !important;
+  background-color: transparent !important;
+  background-image: none !important;
   color: #0F172A !important;
   overflow: hidden;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.22);
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
@@ -1129,10 +1203,9 @@ body[dir="rtl"] .toast-notice {
 }
 
 html[data-theme="dark"] .hero-automotive-stage {
-  background-color: #070F1E !important;
-  background-image: radial-gradient(circle at 75% 30%, rgba(37, 99, 235, 0.28) 0%, transparent 60%),
-                    radial-gradient(circle at 10% 80%, rgba(30, 58, 138, 0.35) 0%, transparent 50%),
-                    linear-gradient(145deg, #070F1E 0%, #0F233D 45%, #142D4E 100%) !important;
+  background-color: transparent !important;
+  background-image: radial-gradient(circle at 75% 30%, rgba(37, 99, 235, 0.22) 0%, transparent 60%),
+                    radial-gradient(circle at 10% 80%, rgba(30, 58, 138, 0.25) 0%, transparent 50%) !important;
   color: #FFFFFF !important;
   border-bottom: 1px solid rgba(59, 130, 246, 0.25);
 }
@@ -1151,7 +1224,7 @@ html[data-theme="dark"] .hero-automotive-stage p {
 .hero-slider-scrim-h {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 45%, rgba(255, 255, 255, 0.60) 100%);
+  background: linear-gradient(to right, rgba(239, 244, 251, 0.96) 0%, rgba(239, 244, 251, 0.88) 45%, rgba(239, 244, 251, 0.58) 100%);
   pointer-events: none;
   z-index: 2;
   transition: background 0.5s ease;
@@ -1160,7 +1233,7 @@ html[data-theme="dark"] .hero-automotive-stage p {
 .hero-slider-scrim-v {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(248, 250, 252, 0.97) 0%, transparent 40%, rgba(255, 255, 255, 0.85) 100%);
+  background: linear-gradient(to top, rgba(239, 244, 251, 0.98) 0%, transparent 40%, rgba(239, 244, 251, 0.85) 100%);
   pointer-events: none;
   z-index: 3;
   transition: background 0.5s ease;
@@ -1178,6 +1251,16 @@ html[data-theme="dark"] .hero-slider-scrim-v {
 .bg-mechanical-grid {
   background-image: radial-gradient(rgba(37, 99, 235, 0.08) 1px, transparent 1px);
   background-size: 28px 28px;
+  animation: gridFloat 24s linear infinite;
+}
+
+@keyframes gridFloat {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 28px 28px;
+  }
 }
 
 html[data-theme="dark"] .bg-mechanical-grid {
@@ -1460,15 +1543,15 @@ html[data-theme="dark"] .hero-card-active {
 }
 
 html[data-theme="light"] .section-contrast-alt {
-  background-color: #F1F5F9;
-  border-top: 1px solid #E2E8F0;
-  border-bottom: 1px solid #E2E8F0;
+  background-color: transparent;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
 }
 
 html[data-theme="dark"] .section-contrast-alt {
-  background-color: #0D1626;
-  border-top: 1px solid #1E293B;
-  border-bottom: 1px solid #1E293B;
+  background-color: transparent;
+  border-top: 1px solid rgba(30, 41, 59, 0.45);
+  border-bottom: 1px solid rgba(30, 41, 59, 0.45);
 }
 
 /* High Contrast Card System */
