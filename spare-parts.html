@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BikeFix | Professional Spare Parts & Components Catalogue</title>
+  <meta name="description" content="Genuine OEM and performance spare parts for motorcycles and bicycles: Brembo pads, high-tensile chains, Continental tubes, Michelin tyres, and accessories." />
+  <link rel="canonical" href="https://bikefix.in/spare-parts.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg" />
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BikeFix | Professional Spare Parts & Components Catalogue" />
+  <meta property="og:description" content="Searchable motorcycle and bicycle components with OEM compatibility assurance and quick enquiry." />
+  <meta property="og:image" content="assets/images/spare-parts/parts-hero.jpg" />
+  <meta property="og:url" content="https://bikefix.in/spare-parts.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org JSON-LD Catalogue Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemPage",
+    "name": "BikeFix Spare Parts Catalogue",
+    "description": "Certified OEM replacement components and accessories for motorcycles and bicycles.",
+    "provider": {
+      "@type": "AutoRepair",
+      "name": "BikeFix Workshop",
+      "telephone": "+919876543210"
+    }
+  }
+  </script>
+
+  <!-- Theme Pre-render Script (Eliminates FOUC) -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('bikefix-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS & Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            'brand-navy': '#142D4E',
+            'brand-blue': '#2563EB',
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header Component -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="BikeFix Home">
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" class="brand-logo-img" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="services.html">Services</a>
+        <a href="spare-parts.html" class="active">Spare Parts</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" data-theme-toggle aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="icon-button" data-rtl-toggle aria-label="Toggle text direction">
+          <i class="fa-solid fa-align-right" aria-hidden="true"></i>
+        </button>
+        <a href="login.html" class="button button-secondary header-cta-login">Login</a>
+        <a href="#parts-enquiry-form" class="button button-primary header-cta-book">Enquire Part</a>
+        <button class="mobile-menu-button" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 36px;" />
+      </a>
+      <button class="icon-button mobile-drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html">Home <span>→</span></a>
+      <a href="home-2.html">Home 2 <span>→</span></a>
+      <a href="services.html">Services <span>→</span></a>
+      <a href="spare-parts.html" class="active">Spare Parts <span>→</span></a>
+      <a href="pricing.html">Pricing <span>→</span></a>
+      <a href="contact.html">Contact <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="button button-secondary w-full">Login</a>
+      <a href="#parts-enquiry-form" class="button button-primary w-full">Enquire Part</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Section 01 – Hero: Automotive Dark Mood Depth with Full-Bleed Inventory Background -->
+    <section class="hero-automotive-stage relative pt-16 pb-20 overflow-hidden">
+      <!-- Full-Bleed Panoramic Automotive Stage Background Image Spanning Entire Hero -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="assets/images/spare-parts/parts-hero-bg.jpg" alt="BikeFix genuine parts warehouse and precision components racks" class="w-full h-full object-cover object-center opacity-15 dark:opacity-30 scale-105 filter brightness-105 contrast-105 dark:brightness-75 dark:contrast-125 transition-all duration-300" />
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60 dark:from-[#070F1E] dark:via-[#070F1E]/90 dark:to-[#070F1E]/75 transition-all duration-300"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70 dark:from-[#070F1E] dark:via-transparent dark:to-[#070F1E]/80 transition-all duration-300"></div>
+      </div>
+
+      <div class="bg-mechanical-grid absolute inset-0 z-0 pointer-events-none"></div>
+
+      <div class="light-streak"></div>
+
+      <div class="container relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-blue-500/20 dark:border-blue-400/30 dark:text-blue-300 text-xs font-bold uppercase tracking-widest mb-6">
+              <span class="beacon-dot bg-emerald-500"></span> Verified Component Inventory
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4 leading-tight">
+              The Right Parts Make<br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-800 dark:from-blue-400 dark:via-sky-300 dark:to-indigo-300">
+                Every Ride Better.
+              </span>
+            </h1>
+            <div class="blue-accent-line"></div>
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-xl">
+              Discover essential motorcycle and bicycle replacement components, tested wear items, and authentic accessories engineered for safety, durability, and smooth performance.
+            </p>
+
+            <div class="flex flex-wrap gap-2 text-xs font-semibold">
+              <span class="badge bg-white/80 text-blue-700 border border-blue-200/80 shadow-sm dark:bg-slate-800/80 dark:text-blue-300 dark:border-slate-700">#BremboPads</span>
+              <span class="badge bg-white/80 text-blue-700 border border-blue-200/80 shadow-sm dark:bg-slate-800/80 dark:text-blue-300 dark:border-slate-700">#SFRChains</span>
+              <span class="badge bg-white/80 text-blue-700 border border-blue-200/80 shadow-sm dark:bg-slate-800/80 dark:text-blue-300 dark:border-slate-700">#ContinentalTubes</span>
+              <span class="badge bg-white/80 text-blue-700 border border-blue-200/80 shadow-sm dark:bg-slate-800/80 dark:text-blue-300 dark:border-slate-700">#MichelinTyres</span>
+              <span class="badge bg-white/80 text-blue-700 border border-blue-200/80 shadow-sm dark:bg-slate-800/80 dark:text-blue-300 dark:border-slate-700">#ShimanoGears</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative flex justify-center">
+            <div class="glow-blue-aura"></div>
+            <div class="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-blue-500/40 h-[380px]">
+              <img src="assets/images/spare-parts/parts-hero.jpg" alt="Motorcycle and cycle spare parts display" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="glass-cockpit-card absolute bottom-4 left-4 right-4 p-3 rounded-xl text-xs">
+                <strong class="block mb-0.5 text-slate-900 dark:text-white"><i class="fa-solid fa-check-double text-blue-600 dark:text-blue-400 mr-1"></i> 100% Genuine Guarantee</strong>
+                <span class="text-slate-600 dark:text-slate-300">Direct authorized distribution channels with manufacturer warranty.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02 & 03 – Vehicle Selector & Parts Categories Navigation -->
+    <section class="section pt-10 pb-12">
+      <div class="container">
+        <!-- Vehicle Selector Segmented Control -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 bg-slate-100 dark:bg-slate-900 rounded-2xl mb-8 border border-slate-200 dark:border-slate-800 shadow-sm">
+          <div class="font-bold text-sm text-slate-700 dark:text-slate-300 flex items-center gap-2">
+            <i class="fa-solid fa-filter text-blue-600"></i> Select Vehicle Type:
+          </div>
+          <div class="flex gap-2 w-full sm:w-auto">
+            <button class="button button-primary flex-1 sm:flex-none text-xs py-2 px-5 active" data-parts-vehicle="all">
+              All Vehicles
+            </button>
+            <button class="button button-secondary flex-1 sm:flex-none text-xs py-2 px-5" data-parts-vehicle="motorcycle">
+              <i class="fa-solid fa-motorcycle mr-1"></i> Motorcycle Parts
+            </button>
+            <button class="button button-secondary flex-1 sm:flex-none text-xs py-2 px-5" data-parts-vehicle="bicycle">
+              <i class="fa-solid fa-bicycle mr-1"></i> Bicycle Parts
+            </button>
+          </div>
+        </div>
+
+        <!-- Four Key Category Spotlight Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div class="card-contrast-heroic p-4 text-center cursor-pointer group" data-parts-cat="tyres">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center mx-auto mb-2 text-xl group-hover:scale-110 transition shadow-sm">
+              <i class="fa-solid fa-circle-notch"></i>
+            </div>
+            <h4 class="font-bold text-sm">Tyres & Tubes</h4>
+            <span class="text-[11px] text-slate-500">Tubeless & Clincher</span>
+          </div>
+
+          <div class="card-contrast-heroic p-4 text-center cursor-pointer group" data-parts-cat="brakes">
+            <div class="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-900/50 text-red-600 flex items-center justify-center mx-auto mb-2 text-xl group-hover:scale-110 transition shadow-sm">
+              <i class="fa-solid fa-compact-disc"></i>
+            </div>
+            <h4 class="font-bold text-sm">Braking Components</h4>
+            <span class="text-[11px] text-slate-500">Pads, Rotors & Lines</span>
+          </div>
+
+          <div class="card-contrast-heroic p-4 text-center cursor-pointer group" data-parts-cat="chains">
+            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 text-amber-600 flex items-center justify-center mx-auto mb-2 text-xl group-hover:scale-110 transition shadow-sm">
+              <i class="fa-solid fa-link"></i>
+            </div>
+            <h4 class="font-bold text-sm">Chains & Sprockets</h4>
+            <span class="text-[11px] text-slate-500">428H & Multi-Speed</span>
+          </div>
+
+          <div class="card-contrast-heroic p-4 text-center cursor-pointer group" data-parts-cat="accessories">
+            <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 flex items-center justify-center mx-auto mb-2 text-xl group-hover:scale-110 transition shadow-sm">
+              <i class="fa-solid fa-toolbox"></i>
+            </div>
+            <h4 class="font-bold text-sm">Accessories & Oils</h4>
+            <span class="text-[11px] text-slate-500">Grips, Locks & Lubes</span>
+          </div>
+        </div>
+
+        <!-- Section 04 – Searchable Catalogue Interface -->
+        <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-6 shadow-sm mb-8">
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+            <!-- Search Input -->
+            <div class="md:col-span-5 relative">
+              <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input id="parts-search" type="text" class="form-control pl-11" placeholder="Search by part name or keyword (e.g. Brembo, chain, tyre)..." />
+            </div>
+
+            <!-- Sort By -->
+            <div class="md:col-span-4">
+              <select id="parts-sort" class="form-control">
+                <option value="default">Sort by: Featured & Popular</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+
+            <!-- In Stock Checkbox -->
+            <div class="md:col-span-3 flex items-center gap-2">
+              <label class="flex items-center gap-2 cursor-pointer text-sm font-semibold text-slate-700 dark:text-slate-300">
+                <input id="parts-stock-only" type="checkbox" class="w-4 h-4 text-blue-600 rounded" />
+                <span>In-Stock Only</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Grid (Unique Photographs for Every Item) -->
+        <div class="parts-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Product 1: Brembo Brake Pads (Motorcycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="brakes" data-vehicle="motorcycle" data-price="1250" data-stock="true" data-brand="Brembo Genuine" data-compat="KTM 250/390, Yamaha R15, Bajaj Dominar" data-desc="High-coefficient sintered metallic compound with progressive bite and fade resistance under severe thermal stress.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-brakes.jpg" alt="Brembo 07043 sintered brake pads" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Motorcycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">Brembo 07043</span>
+              <h3 class="font-bold text-base mb-2">Sintered Front Brake Pads</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹1,250</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: High Performance Chain 428H (Motorcycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="chains" data-vehicle="motorcycle" data-price="1650" data-stock="true" data-brand="SFR Heavy Duty" data-compat="Universal 150cc–350cc Street Motorcycles" data-desc="Solid roller O-ring heavy duty drive chain engineered with alloy steel pins for maximum tensile resilience.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-chain.jpg" alt="High performance motorcycle chain 428H" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Motorcycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">SFR 428H Gold</span>
+              <h3 class="font-bold text-base mb-2">Heavy-Duty O-Ring Drive Chain</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹1,650</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Michelin City Extra Tyre (Motorcycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="tyres" data-vehicle="motorcycle" data-price="2450" data-stock="true" data-brand="Michelin" data-compat="100/90-17 / 110/80-17 Rear Commuter Fitment" data-desc="Puncture resistant carcass with Water Sipe Technology for wet-weather traction and 30,000+ km longevity.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-tyre-michelin.jpg" alt="Michelin motorcycle commuter tyre" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Motorcycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">Michelin City Pro</span>
+              <h3 class="font-bold text-base mb-2">Tubeless Street Motorcycle Tyre</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹2,450</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Continental Bicycle Inner Tube (Bicycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="tyres" data-vehicle="bicycle" data-price="380" data-stock="true" data-brand="Continental" data-compat="700x25c–32c Road & Hybrid Presta 60mm" data-desc="Seamless molded butyl construction with uniform wall thickness to prevent slow leakage and high-pressure blowouts.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-tube-continental.jpg" alt="Continental bicycle inner tube" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Bicycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">Continental Tour 28</span>
+              <h3 class="font-bold text-base mb-2">Quality Butyl Inner Tube</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹380</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 5: Shimano 160mm Disc Rotor (Bicycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="brakes" data-vehicle="bicycle" data-price="890" data-stock="true" data-brand="Shimano Deore" data-compat="6-Bolt or Centerlock 160mm Disc Calipers" data-desc="Laser cut stainless steel braking surface with heat dissipating cutouts to eliminate brake shudder and pad glaze.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-brake-rotors.jpg" alt="Shimano bicycle disc brake rotor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Bicycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">Shimano SM-RT56</span>
+              <h3 class="font-bold text-base mb-2">160mm Disc Brake Rotor</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹890</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 6: NGK Iridium Spark Plug (Motorcycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="accessories" data-vehicle="motorcycle" data-price="750" data-stock="true" data-brand="NGK Laser Iridium" data-compat="KTM, Bajaj, Yamaha, Royal Enfield Himalayan" data-desc="0.6mm ultra-fine iridium tip offering high ignitability, stable idling, and carbon anti-fouling protection.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-spark-plug.jpg" alt="NGK Iridium performance spark plug" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Motorcycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">NGK CR9EIX</span>
+              <h3 class="font-bold text-base mb-2">Laser Iridium Spark Plug</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹750</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 7: Motul 7100 Fully Synthetic Oil (Motorcycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="accessories" data-vehicle="motorcycle" data-price="950" data-stock="true" data-brand="Motul Ester" data-compat="10W50 / 15W50 4-Stroke High-Performance" data-desc="100% Synthetic 4-Stroke lubricant with Ester Technology. Meets JASO MA2 specifications for wet clutch operation.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-synthetic-oil.jpg" alt="Motul 7100 4T synthetic motorcycle engine oil" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Motorcycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">Motul 7100 4T</span>
+              <h3 class="font-bold text-base mb-2">100% Synthetic Ester Oil (1L)</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹950</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 8: Ergonomic Lock-On Handle Grips (Bicycle) -->
+          <article class="card-contrast-heroic parts-card flex flex-col group" data-category="accessories" data-vehicle="bicycle" data-price="490" data-stock="true" data-brand="Ergon Style" data-compat="Standard 22.2mm MTB, Hybrid, City Handlebars" data-desc="Dual density rubber compound with aluminum lock-on collar to eliminate throttle twisting and palm fatigue.">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/spare-parts/part-handle-grips.jpg" alt="Ergonomic bicycle handlebar grips" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 left-3 badge badge-green text-xs">In Stock</span>
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Bicycle</span>
+            </div>
+            <div class="p-5 flex flex-col flex-grow">
+              <span class="text-xs text-slate-400 font-semibold mb-1">BikeFix ProSeries</span>
+              <h3 class="font-bold text-base mb-2">Ergonomic Lock-On Grips</h3>
+              <div class="text-xl font-black text-blue-600 mb-4 price-text">₹490</div>
+              <div class="mt-auto pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                <button class="button button-secondary text-xs py-2 px-3 flex-1" data-open-part-modal>
+                  Details
+                </button>
+                <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-3 flex-1">
+                  Enquire
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div id="parts-empty-notice" class="card text-center p-12 my-8" style="display:none;">
+          <i class="fa-solid fa-box-open text-4xl text-slate-400 mb-3"></i>
+          <h4 class="font-bold text-lg mb-1">No Matching Parts Found</h4>
+          <p class="text-slate-500 text-sm mb-4">We likely have this component in our back-inventory. Submit an enquiry below and we will check warehouse stock immediately.</p>
+          <a href="#parts-enquiry-form" class="button button-primary text-xs py-2 px-4">Submit Part Request</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05 – How to Identify Compatible Parts -->
+    <section class="section section-contrast-alt">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-6">
+            <span class="eyebrow">Fitment Assurance</span>
+            <h2>How to Identify Compatible Parts</h2>
+            <div class="blue-accent-line"></div>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-8">
+              Never install components that are approximate fits. Sub-millimeter discrepancies in chain pitch, axle spacing, or caliper mounts create severe mechanical hazards. Follow our 4-step identification process:
+            </p>
+
+            <div class="space-y-4">
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center flex-shrink-0 text-sm shadow-sm">1</span>
+                <div>
+                  <h4 class="text-base font-bold mb-0.5">Check Vehicle Manufacturer</h4>
+                  <p class="text-xs text-slate-500">Locate manufacturer plate on headtube or steering stem.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center flex-shrink-0 text-sm shadow-sm">2</span>
+                <div>
+                  <h4 class="text-base font-bold mb-0.5">Identify Exact Model and Production Year</h4>
+                  <p class="text-xs text-slate-500">Braking standards and chain pitches frequently revise between model years.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center flex-shrink-0 text-sm shadow-sm">3</span>
+                <div>
+                  <h4 class="text-base font-bold mb-0.5">Verify Component Stamp & Specifications</h4>
+                  <p class="text-xs text-slate-500">Read tyre ETRTO markings (e.g. 37-622) or chain link model stamps.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-8 h-8 rounded-lg bg-blue-600 text-white font-bold flex items-center justify-center flex-shrink-0 text-sm shadow-sm">4</span>
+                <div>
+                  <h4 class="text-base font-bold mb-0.5">Confirm Free Compatibility with Workshop</h4>
+                  <p class="text-xs text-slate-500">Send us a photo on WhatsApp or submit our form below for mechanic verification.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 h-[460px]">
+              <img src="assets/images/spare-parts/part-compatibility.jpg" alt="Technician measuring replacement part tolerances with vernier caliper" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 06 – Parts Enquiry Form -->
+    <section class="section" id="parts-enquiry-form">
+      <div class="container max-w-3xl">
+        <div class="text-center mb-10">
+          <span class="badge badge-blue text-xs font-bold uppercase mb-2">Stock & Fitment Check</span>
+          <h2 class="text-3xl font-black mb-2">Check Part Availability</h2>
+          <p class="text-slate-500 text-sm">Provide your vehicle specifications and part requirement. Our store manager will cross-reference distributor inventory.</p>
+        </div>
+
+        <form data-enquiry-form class="card-contrast-heroic p-8 md:p-10 shadow-xl space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-group">
+              <label for="enquiry-vehicle-type">Vehicle Type</label>
+              <select id="enquiry-vehicle-type" class="form-control" required>
+                <option value="">Select vehicle type...</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="bicycle">Bicycle</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-mfr">Manufacturer / Make</label>
+              <input id="enquiry-mfr" type="text" class="form-control" placeholder="e.g. Royal Enfield / Trek / Giant / KTM" required />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-group">
+              <label for="enquiry-model">Model Name</label>
+              <input id="enquiry-model" type="text" class="form-control" placeholder="e.g. Hunter 350 / Marlin 7" required />
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-year">Manufacturing Year</label>
+              <input id="enquiry-year" type="number" class="form-control" placeholder="e.g. 2023" min="1990" max="2027" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="enquiry-part-name">Required Replacement Part</label>
+            <input id="enquiry-part-name" type="text" class="form-control" placeholder="e.g. Front ceramic brake pads / 9-speed chain" required />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-group">
+              <label for="enquiry-phone">Contact Phone / WhatsApp</label>
+              <input id="enquiry-phone" type="tel" class="form-control" placeholder="+91 98765 43210" required />
+            </div>
+
+            <div class="form-group">
+              <label for="enquiry-photo">Upload Part Photo (Optional)</label>
+              <input id="enquiry-photo" type="file" class="form-control pt-2 text-xs" accept="image/*" />
+            </div>
+          </div>
+
+          <button type="submit" class="button button-primary w-full mt-4">
+            <i class="fa-solid fa-magnifying-glass mr-2"></i> Check Part Availability & Price
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section 07 – Parts Quality Information -->
+    <section class="section section-contrast-alt">
+      <div class="container">
+        <div class="section-title text-center max-w-2xl mx-auto">
+          <span class="eyebrow">Our Quality Promise</span>
+          <h2>Genuine Spares & Certified Aftermarket</h2>
+          <p>We believe counterfeit or sub-grade replacement components are dangerous. Here is how BikeFix protects you:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card-contrast-heroic p-6">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center font-bold text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="font-bold text-base mb-2">OEM Authorized Distributors</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              We source directly from manufacturer-approved distribution hubs, guaranteeing authentic metallurgy, genuine seals, and proper heat treatments.
+            </p>
+          </div>
+
+          <div class="card-contrast-heroic p-6">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center font-bold text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <h4 class="font-bold text-base mb-2">Pre-Installation Fitment Check</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Every part undergoes caliper and pitch gauge verification before being mounted to your vehicle to prevent binding or premature failure.
+            </p>
+          </div>
+
+          <div class="card-contrast-heroic p-6">
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 text-blue-600 flex items-center justify-center font-bold text-xl mb-4 shadow-sm">
+              <i class="fa-solid fa-file-contract"></i>
+            </div>
+            <h4 class="font-bold text-base mb-2">Manufacturer Warranty Backing</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              All fitted parts carry standard 6 to 12 month manufacturer defect warranties, backed by clear workshop invoice documentation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 08 – Final CTA: Can't Find Your Required Part? -->
+    <section class="section py-16 bg-[#070F1E] text-white border-t border-slate-800">
+      <div class="container text-center max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 uppercase tracking-widest text-xs mb-4 border border-blue-500/30">
+          Custom Part Sourcing
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Can't Find Your Required Part?</h2>
+        <p class="text-slate-300 text-base mb-8 leading-relaxed">
+          We maintain express ordering channels with domestic and European parts distributors. Send us the component details and our workshop team will identify and source the exact replacement.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#parts-enquiry-form" class="button button-primary">
+            <i class="fa-solid fa-paper-plane mr-2"></i> Submit Custom Part Enquiry
+          </a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="button button-whatsapp">
+            <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Photo to Head Mechanic
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick View Product Modal -->
+  <div class="modal-overlay" id="part-modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="part-modal-close" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+        <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 h-60">
+          <img id="modal-part-img" src="" alt="Part Preview" class="w-full h-full object-cover" />
+        </div>
+        <div>
+          <span id="modal-part-brand" class="badge badge-blue text-xs mb-2">Brand</span>
+          <h3 id="modal-part-title" class="text-xl font-bold mb-2">Part Name</h3>
+          <div id="modal-part-price" class="text-2xl font-black text-blue-600 mb-3 price-text">₹--</div>
+          
+          <div class="text-xs text-slate-500 mb-4">
+            <strong class="text-slate-800 dark:text-slate-200 block mb-1">Compatibility:</strong>
+            <span id="modal-part-compat">Fitment</span>
+          </div>
+
+          <p id="modal-part-desc" class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+            Detailed part description.
+          </p>
+
+          <a id="modal-enquire-btn" href="#parts-enquiry-form" class="button button-primary w-full text-xs py-3">
+            <i class="fa-solid fa-cart-flatbed mr-2"></i> Enquire for This Component
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-block mb-4">
+            <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 48px; filter: brightness(0) invert(1);" />
+          </a>
+          <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
+            BikeFix is a premium motorcycle and bicycle service workshop. We deliver precision mechanical maintenance, certified safety inspections, transparent pricing, and genuine replacement parts.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-slate-400">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span>Workshop Open: Mon – Sat, 8:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Workshop Services</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#motorcycle-services" class="hover:text-blue-400">Motorcycle Engine Care</a></li>
+            <li><a href="services.html#motorcycle-services" class="hover:text-blue-400">Brake Overhauls & Pads</a></li>
+            <li><a href="services.html#bicycle-services" class="hover:text-blue-400">Bicycle Gear Derailleur Tuning</a></li>
+            <li><a href="services.html#bicycle-services" class="hover:text-blue-400">Precision Wheel Truing</a></li>
+            <li><a href="services.html#diagnosis" class="hover:text-blue-400">Diagnostic Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Spare Parts & Pricing</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Tyres & Tubes</a></li>
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Braking Components</a></li>
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Chains & Sprockets</a></li>
+            <li><a href="pricing.html" class="hover:text-blue-400">Transparent Price Packages</a></li>
+            <li><a href="pricing.html#estimator" class="hover:text-blue-400">Online Cost Estimator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Workshop Hub</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot mt-1 text-blue-400"></i>
+              <span>42 Mechanics Way, Central Auto District</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-blue-400"></i>
+              <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <a href="https://wa.me/919876543210" target="_blank" class="hover:text-white">+91 98765 43210 (Direct)</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-blue-400"></i>
+              <a href="mailto:service@bikefix.in" class="hover:text-white">service@bikefix.in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span class="current-year">2026</span> BIKEFIX Workshop Technologies. All rights reserved. Ride Smooth. Travel Happy.
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="sticky-mobile-bar">
+    <div class="sticky-info">
+      <strong>Fast Workshop Booking</strong>
+      <small>Motorcycles & Bicycles</small>
+    </div>
+    <div class="sticky-actions">
+      <a href="tel:+919876543210" class="icon-button" style="background:#1E3A8A; color:#FFF; border:none;" aria-label="Call Workshop">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="#parts-enquiry-form" class="button button-primary" style="padding: 8px 16px; font-size: 0.85rem; min-height: 40px;">
+        Enquire Part
+      </a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BikeFix | Complete Repair & Servicing Catalogue</title>
+  <meta name="description" content="Explore our complete catalogue of motorcycle and bicycle repair services. From engine diagnostics to gear derailleur tuning and puncture fixes." />
+  <link rel="canonical" href="https://bikefix.in/services.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg" />
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BikeFix | Complete Repair & Servicing Catalogue" />
+  <meta property="og:description" content="Specialized motorcycle and bicycle maintenance with real-time diagnostic symptom assessments." />
+  <meta property="og:image" content="assets/images/services/services-hero.jpg" />
+  <meta property="og:url" content="https://bikefix.in/services.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org JSON-LD Service Catalogue Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Motorcycle & Bicycle Repair",
+    "provider": {
+      "@type": "AutoRepair",
+      "name": "BikeFix Workshop",
+      "telephone": "+919876543210"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Workshop Repair Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Tyre & Puncture Solutions"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brake System Maintenance"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Chain & Drivetrain Overhaul"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Gear Shifting Derailleur Tuning"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Engine Inspection & Valve Clearance"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- Theme Pre-render Script (Eliminates FOUC) -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('bikefix-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS & Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            'brand-navy': '#142D4E',
+            'brand-blue': '#2563EB',
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header Component -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="BikeFix Home">
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" class="brand-logo-img" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="spare-parts.html">Spare Parts</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" data-theme-toggle aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="icon-button" data-rtl-toggle aria-label="Toggle text direction">
+          <i class="fa-solid fa-align-right" aria-hidden="true"></i>
+        </button>
+        <a href="login.html" class="button button-secondary header-cta-login">Login</a>
+        <a href="#booking-form" class="button button-primary header-cta-book">Book a Service</a>
+        <button class="mobile-menu-button" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 36px;" />
+      </a>
+      <button class="icon-button mobile-drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html">Home <span>→</span></a>
+      <a href="home-2.html">Home 2 <span>→</span></a>
+      <a href="services.html" class="active">Services <span>→</span></a>
+      <a href="spare-parts.html">Spare Parts <span>→</span></a>
+      <a href="pricing.html">Pricing <span>→</span></a>
+      <a href="contact.html">Contact <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="button button-secondary w-full">Login</a>
+      <a href="#booking-form" class="button button-primary w-full">Book a Service</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Section 01 – Service Introduction: Cinematic Hero with Full-Bleed Workshop Bay Background -->
+    <section class="hero-automotive-stage relative pt-16 pb-20 overflow-hidden">
+      <!-- Full-Bleed Panoramic Automotive Stage Background Image Spanning Entire Hero -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="assets/images/services/services-hero-bg.jpg" alt="BikeFix multi-bay service workshop floor" class="w-full h-full object-cover object-center opacity-15 dark:opacity-30 scale-105 filter brightness-105 contrast-105 dark:brightness-75 dark:contrast-125 transition-all duration-300" />
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60 dark:from-[#070F1E] dark:via-[#070F1E]/90 dark:to-[#070F1E]/75 transition-all duration-300"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70 dark:from-[#070F1E] dark:via-transparent dark:to-[#070F1E]/80 transition-all duration-300"></div>
+      </div>
+
+      <div class="bg-mechanical-grid absolute inset-0 z-0 pointer-events-none"></div>
+
+      <div class="light-streak"></div>
+
+      <div class="container relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left: Heading & Description -->
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-blue-500/20 dark:border-blue-400/30 dark:text-blue-300 text-xs font-bold uppercase tracking-widest mb-6">
+              <span class="beacon-dot bg-blue-500"></span> Precision Repair Catalogue
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4 leading-tight">
+              Expert Repairs for<br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-800 dark:from-blue-400 dark:via-sky-300 dark:to-indigo-300">
+                Every Type of Ride.
+              </span>
+            </h1>
+            <div class="blue-accent-line"></div>
+            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-xl">
+              Explore practical repair and maintenance solutions for motorcycles and bicycles, handled with care, calibrated tools, and obsessive attention to mechanical detail.
+            </p>
+
+            <!-- Vehicle Type Quick Jump Buttons -->
+            <div class="flex flex-wrap gap-3">
+              <a href="#motorcycle-services" class="button button-primary">
+                <i class="fa-solid fa-motorcycle mr-2"></i> Motorcycle Services
+              </a>
+              <a href="#bicycle-services" class="button button-secondary">
+                <i class="fa-solid fa-bicycle mr-2"></i> Bicycle Services
+              </a>
+              <a href="#diagnosis" class="button button-secondary">
+                <i class="fa-solid fa-stethoscope mr-2"></i> Symptom Diagnostic Tool
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Hero Visual with Luminous Aura -->
+          <div class="lg:col-span-5 relative flex justify-center">
+            <div class="glow-blue-aura"></div>
+            <div class="relative z-10 w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-blue-500/40 h-[400px]">
+              <img src="assets/images/services/services-hero.jpg" alt="Motorcycle service center repair technician at work" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+              <div class="glass-cockpit-card absolute bottom-4 left-4 right-4 p-3.5 rounded-xl text-xs">
+                <strong class="block mb-0.5 text-slate-900 dark:text-white"><i class="fa-solid fa-wrench text-blue-600 dark:text-blue-400 mr-1"></i> Certified Diagnostics</strong>
+                <span class="text-slate-600 dark:text-slate-300">Engine valve clearance, torque calibrations & hydraulic line purges.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02 – Motorcycle Repair Services -->
+    <section class="section" id="motorcycle-services">
+      <div class="container">
+        <div class="section-title">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold shadow-md">
+              <i class="fa-solid fa-motorcycle"></i>
+            </span>
+            <div>
+              <span class="eyebrow">Motorcycle Care</span>
+              <h2>Motorcycle Repair & Maintenance</h2>
+            </div>
+          </div>
+          <p>Engineered diagnostics and factory-approved service schedules for street commuters, cruisers, and sport motorbikes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Moto Service 1: Engine Inspection -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/moto-engine.jpg" alt="Motorcycle engine valve clearance inspection" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Engine Spec</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Engine Inspection & Tuning</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Check visible engine-related issues, valve clearances, spark plug ignition gaps, and compression balance.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Starts ₹450</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moto Service 2: Brake Maintenance -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/moto-brakes.jpg" alt="Motorcycle disc brake pad replacement" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Hydraulics</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Brake Maintenance & Fluid</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Brake pad wear measurement, master cylinder piston seals, DOT 4 hydraulic bleed, and rotor true alignment.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Starts ₹250</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moto Service 3: Tyre Services -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/moto-tyres.jpg" alt="Motorcycle tyre tread inspection and pressure check" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Wheels</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Tyre Services & Balancing</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Tubeless puncture mushroom plugs, electronic wheel balancing, valve stem replacement, and cold PSI setup.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Starts ₹120</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Moto Service 4: Chain Maintenance -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/moto-chain.jpg" alt="Motorcycle drive chain cleaning and lubrication" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Drivetrain</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Chain Clean & Tension Check</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Degreaser bath, O-ring/X-ring condition audit, swingarm alignment marks, and synthetic tacky lube coat.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Starts ₹350</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03 – Bicycle Repair Services -->
+    <section class="section section-contrast-alt" id="bicycle-services">
+      <div class="container">
+        <div class="section-title">
+          <div class="flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shadow-md">
+              <i class="fa-solid fa-bicycle"></i>
+            </span>
+            <div>
+              <span class="eyebrow text-emerald-600">Bicycle Care</span>
+              <h2>Bicycle Repair & Overhaul</h2>
+            </div>
+          </div>
+          <p>Precision tuning for road bikes, gravel tourers, hybrid commuters, and downhill mountain bikes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Bike Service 1: Puncture Repair -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/home-1/repair-puncture.jpg" alt="Hand patching bicycle tyre inner tube" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Express</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Puncture Repair & Tube</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Inner tube vulcanization patch, puncture source casing sweep, rim tape check, and high pressure inflate.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-600 font-bold">
+                <span>Starts ₹50</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike Service 2: Gear Tuning -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/bike-gears.jpg" alt="Bicycle drivetrain derailleur adjustment" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Indexing</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Gear Derailleur Tuning</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Derailleur hanger alignment gauge, B-tension screw calibration, shifter cable pre-stretch, and crisp indexing.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-600 font-bold">
+                <span>Starts ₹180</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike Service 3: Brake Adjustment -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/bike-brakes.jpg" alt="Bicycle disc brake caliper alignment" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Safety</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Brake Alignment & Pads</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Disc caliper centering, V-brake toe-in angle, rotor rub removal, and mineral oil hydraulic fluid burp.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-600 font-bold">
+                <span>Starts ₹120</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bike Service 4: Wheel Alignment -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/services/bike-wheel.jpg" alt="Bicycle wheel truing stand with dial indicator" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white text-xs border border-slate-700">Precision</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Wheel Alignment & Truing</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Tensiometer spoke balancing, radial and lateral rim wobble correction, dish verification, and hub cone adjustment.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-600 font-bold">
+                <span>Starts ₹250</span>
+                <a href="#booking-form" class="hover:underline">Schedule Check →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04 – Repair Diagnosis: Find the Problem Before It Becomes Bigger -->
+    <section class="section" id="diagnosis">
+      <div class="container">
+        <div class="section-title text-center max-w-2xl mx-auto">
+          <span class="eyebrow">Interactive Symptom Matrix</span>
+          <h2>Find the Problem Before It Becomes Bigger</h2>
+          <p>Notice a strange behavior while riding? Click any symptom row below to see our mechanical diagnosis and instantly preselect the repair in our booking form.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <!-- Clickable Symptom Table (7 Cols) -->
+          <div class="lg:col-span-7 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-lg">
+            <div class="p-4 bg-slate-100 dark:bg-slate-800/80 font-bold text-xs uppercase tracking-wider text-slate-500 flex justify-between">
+              <span>Customer Symptom (Click to Diagnose)</span>
+              <span>Suggested Workshop Inspection</span>
+            </div>
+
+            <div class="divide-y divide-slate-100 dark:divide-slate-800">
+              <div class="symptom-row p-4 flex items-center justify-between cursor-pointer hover:bg-blue-50/60 dark:hover:bg-slate-800/50 transition" data-symptom="unusual-noise" data-symptom-title="Unusual Squeak, Click or Grinding Noise" data-service="Chain & Drivetrain Overhaul" data-diagnosis-desc="Usually caused by dry chain links, worn bottom bracket bearings, loose crank bolts, or dry pivot bearings." data-vehicle="all">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-volume-high text-blue-600"></i>
+                  <span class="font-semibold text-sm">Unusual Clicking or Grinding Noise</span>
+                </div>
+                <span class="badge badge-blue text-xs">Chain, Drivetrain or Engine</span>
+              </div>
+
+              <div class="symptom-row p-4 flex items-center justify-between cursor-pointer hover:bg-blue-50/60 dark:hover:bg-slate-800/50 transition" data-symptom="weak-braking" data-symptom-title="Weak or Spongy Braking Lever" data-service="Brake System Inspection & Pads" data-diagnosis-desc="Caused by glazed pads, oil contamination on disc rotors, aerated hydraulic lines, or glazed drums." data-vehicle="all">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-hand text-red-500"></i>
+                  <span class="font-semibold text-sm">Weak Braking / Spongy Lever</span>
+                </div>
+                <span class="badge badge-blue text-xs">Brake Hydraulics & Pads</span>
+              </div>
+
+              <div class="symptom-row p-4 flex items-center justify-between cursor-pointer hover:bg-blue-50/60 dark:hover:bg-slate-800/50 transition" data-symptom="difficult-gears" data-symptom-title="Difficult Gear Changes / Chain Skipping" data-service="Gear Tuning & Shifting Calibration" data-diagnosis-desc="Caused by cable stretch, bent rear derailleur hanger, dirt-clogged outer housing, or shark-finned cassette teeth." data-vehicle="all">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-gear text-amber-500"></i>
+                  <span class="font-semibold text-sm">Difficult Gear Changes or Slip</span>
+                </div>
+                <span class="badge badge-blue text-xs">Gear Shifting Mechanism</span>
+              </div>
+
+              <div class="symptom-row p-4 flex items-center justify-between cursor-pointer hover:bg-blue-50/60 dark:hover:bg-slate-800/50 transition" data-symptom="frequent-punctures" data-symptom-title="Frequent Punctures Every Few Rides" data-service="Tyre Puncture & Replacement" data-diagnosis-desc="Indicates an embedded glass shard in tyre casing, worn rim tape exposing spoke nipples, or pinch flats from under-inflation." data-vehicle="all">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-circle-notch text-purple-500"></i>
+                  <span class="font-semibold text-sm">Frequent Punctures</span>
+                </div>
+                <span class="badge badge-blue text-xs">Tyre Casing & Tube</span>
+              </div>
+
+              <div class="symptom-row p-4 flex items-center justify-between cursor-pointer hover:bg-blue-50/60 dark:hover:bg-slate-800/50 transition" data-symptom="wheel-vibration" data-symptom-title="Wheel Wobble or High-Speed Vibration" data-service="General Mechanical Diagnostic" data-diagnosis-desc="Caused by loose spoke tension, rim out-of-true, pitted hub cone bearings, or unbalanced motorcycle wheels." data-vehicle="all">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-arrows-spin text-emerald-500"></i>
+                  <span class="font-semibold text-sm">Wheel Vibration / Frame Shudder</span>
+                </div>
+                <span class="badge badge-blue text-xs">Wheel Alignment & Truing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Assessment Card & Inspection Image (5 Cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-6">
+            <div id="diagnosis-card">
+              <div class="p-6 bg-slate-900 text-white rounded-2xl border-2 border-blue-500/50 shadow-xl text-center">
+                <i class="fa-solid fa-hand-pointer text-3xl text-blue-400 mb-3 animate-pulse"></i>
+                <h4 class="font-bold text-base mb-1 text-white">Click Any Symptom on the Left</h4>
+                <p class="text-xs text-slate-400">Our diagnostic algorithm will display the mechanical root cause and allow instant 1-click booking preselection.</p>
+              </div>
+            </div>
+
+            <div class="rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 h-52">
+              <img src="assets/images/services/diagnosis-inspection.jpg" alt="Motorcycle frame and suspension diagnostic inspection" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05 – Repair Service Details (Detailed Accordion) -->
+    <section class="section section-contrast-alt">
+      <div class="container max-w-4xl">
+        <div class="section-title text-center">
+          <span class="eyebrow">Transparency In Execution</span>
+          <h2>Repair Service Details & Specifications</h2>
+          <p>Everything you need to know before booking: what is included, time requirements, and quality standards.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="accordion-item active">
+            <div class="accordion-header">
+              <span>What is included in a Full General Servicing?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              A 32-point bumper-to-bumper procedure: Complete ultrasonic degreasing of cassette and chain; brake calipers centered and bled; headset and bottom bracket re-greased; wheel spokes tension checked; gear derailleur indexed; cables lubricated; all bolts torqued to manufacturer Newton-meter specs; and a road test by our head mechanic.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Who needs this service and how frequently?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              Every daily commuter should schedule an essential check every 4 to 6 months. For endurance cyclists and highway motorcyclists, a complete care overhaul is recommended prior to any major multi-day ride or at 3,000 km intervals.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What is the typical inspection and turnaround time?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              Preliminary inspection takes 15–20 minutes. Minor repairs (punctures, brake pad swap, cable replacement) are completed within 45–60 minutes. Full general overhauls typically require same-day pickup (drop off by 10 AM, collect by 6 PM).
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>How are estimated charges calculated?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              Our rates are published and fixed. Labor charges are standardized by repair item. If parts replacement (chain, pads, inner tubes) is required, we provide written options (Standard OEM vs Premium Aftermarket) with itemized retail pricing before installation.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Important customer information regarding warranties</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              All workshop labor is backed by our 30-Day BikeFix Workmanship Guarantee. If gear shifting goes out of alignment or brake rub occurs within 30 days of service, bring your bike back for a free micro-tune adjustment with no questions asked.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 06 – Frequently Asked Service Questions (At Least 6 Questions) -->
+    <section class="section">
+      <div class="container max-w-4xl">
+        <div class="section-title text-center">
+          <span class="eyebrow">Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions answered to make your workshop visit effortless.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Do I need to book an appointment or can I walk in?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              Walk-ins are always welcome for emergency punctures, tube swaps, and quick cable fixes. For full general servicing, tune-ups, or motorcycle engine diagnostics, booking an online appointment reserves your dedicated mechanic bay and guarantees faster turnaround.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Do you service electric bicycles and e-scooters?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              Yes! We provide mechanical maintenance for e-bikes including hydraulic disc brakes, heavy-duty e-bike rated chains, wheel truing, and puncture repairs. (Note: we do not service proprietary internal high-voltage battery electronics).
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Can I bring my own replacement spare parts?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              Yes. You are welcome to supply your own compatible components. We will inspect them for safety and fitment, and only charge our standard labor installation fee.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What brands of motorcycles do you service?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              We service all major brands: Royal Enfield, KTM, Honda, Yamaha, Bajaj, TVS, Suzuki, Hero, Kawasaki, and BMW Motorrad.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What happens if unexpected damage is found during repair?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              We take photos of the defective part and send them immediately via WhatsApp or phone with an explanation and cost estimate. We never proceed with unapproved paid work.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>What payment methods do you accept at the workshop?</span>
+              <div class="accordion-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="accordion-body">
+              We accept UPI (GPay, PhonePe, Paytm), Credit & Debit cards, Net Banking, and Cash. Digital tax invoices are emailed immediately upon settlement.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 07 – Book a Repair (Service-Specific Form) -->
+    <section class="section bg-[#070F1E] text-white border-t border-slate-800" id="booking-form">
+      <div class="container max-w-3xl">
+        <div class="text-center mb-10">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 font-bold uppercase text-xs mb-3 border border-blue-500/30">
+            Service Reservation
+          </span>
+          <h2 class="text-3xl font-black text-white mb-2">Book Your Repair Service</h2>
+          <p class="text-slate-400 text-sm">Select your service item and preferred date. Our team will verify bay availability and confirm your slot.</p>
+        </div>
+
+        <form data-booking-form class="bg-slate-950 p-8 rounded-3xl border border-blue-500/30 shadow-2xl space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-group">
+              <label for="booking-vehicle-select" class="text-slate-200">Vehicle Type</label>
+              <select id="booking-vehicle-select" class="form-control bg-slate-900 border-slate-700 text-white" required>
+                <option value="">Select vehicle...</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="bicycle">Bicycle</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="booking-service-select" class="text-slate-200">Specific Repair Category</label>
+              <select id="booking-service-select" class="form-control bg-slate-900 border-slate-700 text-white" required>
+                <option value="">Select repair...</option>
+                <option value="Tyre Puncture & Replacement">Tyre Puncture & Replacement</option>
+                <option value="Brake System Inspection & Pads">Brake System Inspection & Pads</option>
+                <option value="Chain & Drivetrain Overhaul">Chain & Drivetrain Overhaul</option>
+                <option value="Gear Tuning & Shifting Calibration">Gear Tuning & Shifting Calibration</option>
+                <option value="Precision Wheel Truing">Precision Wheel Truing</option>
+                <option value="Engine Inspection & Tuning">Engine Inspection & Tuning</option>
+                <option value="General Servicing">Comprehensive General Servicing</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-group">
+              <label for="booking-cust-name" class="text-slate-200">Customer Name</label>
+              <input id="booking-cust-name" type="text" class="form-control bg-slate-900 border-slate-700 text-white" placeholder="Ramesh Patel" required />
+            </div>
+
+            <div class="form-group">
+              <label for="booking-cust-phone" class="text-slate-200">Phone / WhatsApp</label>
+              <input id="booking-cust-phone" type="tel" class="form-control bg-slate-900 border-slate-700 text-white" placeholder="+91 98765 43210" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-cust-date" class="text-slate-200">Preferred Date</label>
+            <input id="booking-cust-date" type="date" class="form-control bg-slate-900 border-slate-700 text-white" required />
+          </div>
+
+          <button type="submit" class="button button-primary w-full mt-4">
+            <i class="fa-solid fa-calendar-check mr-2"></i> Confirm Repair Booking
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-block mb-4">
+            <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 48px; filter: brightness(0) invert(1);" />
+          </a>
+          <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
+            BikeFix is a premium motorcycle and bicycle service workshop. We deliver precision mechanical maintenance, certified safety inspections, transparent pricing, and genuine replacement parts.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-slate-400">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span>Workshop Open: Mon – Sat, 8:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Workshop Services</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#motorcycle-services" class="hover:text-blue-400">Motorcycle Engine Care</a></li>
+            <li><a href="services.html#motorcycle-services" class="hover:text-blue-400">Brake Overhauls & Pads</a></li>
+            <li><a href="services.html#bicycle-services" class="hover:text-blue-400">Bicycle Gear Derailleur Tuning</a></li>
+            <li><a href="services.html#bicycle-services" class="hover:text-blue-400">Precision Wheel Truing</a></li>
+            <li><a href="services.html#diagnosis" class="hover:text-blue-400">Diagnostic Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Spare Parts & Pricing</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Tyres & Tubes</a></li>
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Braking Components</a></li>
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Chains & Sprockets</a></li>
+            <li><a href="pricing.html" class="hover:text-blue-400">Transparent Price Packages</a></li>
+            <li><a href="pricing.html#estimator" class="hover:text-blue-400">Online Cost Estimator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Workshop Hub</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot mt-1 text-blue-400"></i>
+              <span>42 Mechanics Way, Central Auto District</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-blue-400"></i>
+              <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <a href="https://wa.me/919876543210" target="_blank" class="hover:text-white">+91 98765 43210 (Direct)</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-blue-400"></i>
+              <a href="mailto:service@bikefix.in" class="hover:text-white">service@bikefix.in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span class="current-year">2026</span> BIKEFIX Workshop Technologies. All rights reserved. Ride Smooth. Travel Happy.
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="sticky-mobile-bar">
+    <div class="sticky-info">
+      <strong>Fast Workshop Booking</strong>
+      <small>Motorcycles & Bicycles</small>
+    </div>
+    <div class="sticky-actions">
+      <a href="tel:+919876543210" class="icon-button" style="background:#1E3A8A; color:#FFF; border:none;" aria-label="Call Workshop">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="#booking-form" class="button button-primary" style="padding: 8px 16px; font-size: 0.85rem; min-height: 40px;">
+        Book Now
+      </a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

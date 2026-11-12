@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BikeFix | Premium Motorcycle & Bicycle Workshop</title>
+  <meta name="description" content="Expert motorcycle and bicycle repair services, certified mechanics, transparent pricing, and genuine spare parts. Ride smooth, travel happy." />
+  <link rel="canonical" href="https://bikefix.in/index.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo/favicon.svg" />
+
+  <!-- OpenGraph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BikeFix | Premium Motorcycle & Bicycle Workshop" />
+  <meta property="og:description" content="Precision motorcycle and bicycle repair with transparent pricing, certified mechanics, and zero repeated photography." />
+  <meta property="og:image" content="assets/images/home-1/hero-mechanic.jpg" />
+  <meta property="og:url" content="https://bikefix.in/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Schema.org JSON-LD LocalBusiness Microdata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "BikeFix Workshop",
+    "image": "https://bikefix.in/assets/images/home-1/hero-mechanic.jpg",
+    "description": "Premium motorcycle and bicycle repair workshop offering transparent charges, certified mechanics, and genuine spare parts.",
+    "telephone": "+919876543210",
+    "email": "service@bikefix.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "42 Mechanics Way, Central Auto District",
+      "addressLocality": "Bangalore",
+      "addressRegion": "KA",
+      "postalCode": "560048",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "12.9716",
+      "longitude": "77.5946"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "20:00"
+      }
+    ],
+    "priceRange": "₹50 - ₹2,799"
+  }
+  </script>
+
+  <!-- Theme Pre-render Script (Eliminates FOUC) -->
+  <script>
+    (function() {
+      var theme = localStorage.getItem('bikefix-theme') || 'light';
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
+  <!-- Tailwind CSS & Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['selector', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            'brand-navy': '#142D4E',
+            'brand-blue': '#2563EB',
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header Component -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="BikeFix Home">
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" class="brand-logo-img" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="home-2.html">Home 2</a>
+        <a href="services.html">Services</a>
+        <a href="spare-parts.html">Spare Parts</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" data-theme-toggle aria-label="Toggle theme">
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+        <button class="icon-button" data-rtl-toggle aria-label="Toggle text direction">
+          <i class="fa-solid fa-align-right" aria-hidden="true"></i>
+        </button>
+        <a href="login.html" class="button button-secondary header-cta-login">Login</a>
+        <a href="#booking" class="button button-primary header-cta-book">Book a Service</a>
+        <button class="mobile-menu-button" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Menu">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 36px;" />
+      </a>
+      <button class="icon-button mobile-drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="active">Home <span>→</span></a>
+      <a href="home-2.html">Home 2 <span>→</span></a>
+      <a href="services.html">Services <span>→</span></a>
+      <a href="spare-parts.html">Spare Parts <span>→</span></a>
+      <a href="pricing.html">Pricing <span>→</span></a>
+      <a href="contact.html">Contact <span>→</span></a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="button button-secondary w-full">Login</a>
+      <a href="#booking" class="button button-primary w-full">Book a Service</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Section 01 – Hero: Interactive Multi-Slide Card Showcase with Dynamic Full-Bleed Backgrounds -->
+    <section class="hero-automotive-stage relative pt-16 pb-24 overflow-hidden" data-hero-carousel>
+      <!-- Full-Bleed Dynamic Background Images Spanning Entire Hero Section -->
+      <div class="hero-slider-bg-container">
+        <!-- Slide 1 Background (Engine & Workshop Bay) -->
+        <img src="assets/images/home-1/slide-1-bg.jpg" alt="Workshop bay" class="hero-bg-slide active" data-bg-index="0" />
+        <!-- Slide 2 Background (Cycle Workshop) -->
+        <img src="assets/images/home-1/slide-2-bg.jpg" alt="Velo workshop" class="hero-bg-slide" data-bg-index="1" />
+        <!-- Slide 3 Background (Hydraulic Brake Pit) -->
+        <img src="assets/images/home-1/slide-3-bg.jpg" alt="Diagnostic bay" class="hero-bg-slide" data-bg-index="2" />
+        <!-- Slide 4 Background (Suspension & Wheel Floor) -->
+        <img src="assets/images/home-1/slide-4-bg.jpg" alt="Service floor" class="hero-bg-slide" data-bg-index="3" />
+
+        <!-- Dedicated Dual-Direction Scrim Overlays (Guaranteed Light Mode Clarity) -->
+        <div class="hero-slider-scrim-h"></div>
+        <div class="hero-slider-scrim-v"></div>
+      </div>
+
+      <div class="bg-mechanical-grid absolute inset-0 z-0 pointer-events-none"></div>
+
+      <!-- Animated Light Streak -->
+      <div class="light-streak"></div>
+
+      <!-- Rotating Background Gear Graphic (Mechanical watermark) -->
+      <div class="absolute -right-20 -top-20 w-[420px] h-[420px] pointer-events-none opacity-20 dark:opacity-10 rotate-gear z-0 text-blue-500/30 dark:text-blue-400">
+        <svg viewBox="0 0 200 200" fill="currentColor" class="w-full h-full">
+          <path d="M100 20 A80 80 0 1 0 100 180 A80 80 0 1 0 100 20 M100 55 A45 45 0 1 1 100 145 A45 45 0 1 1 100 55" />
+          <circle cx="100" cy="100" r="28" fill="none" stroke="currentColor" stroke-width="7" stroke-dasharray="6 4"/>
+        </svg>
+      </div>
+
+      <div class="container relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Column: Copy & High-Impact CTAs -->
+          <div class="lg:col-span-7">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200/80 text-teal-800 dark:bg-blue-500/20 dark:border-blue-400/30 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+              <span id="hero-slide-beacon" class="beacon-dot bg-teal-500"></span>
+              <span id="hero-slide-eyebrow-text">Certified Workshop Care</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-[3.5rem] font-black text-slate-900 dark:text-white leading-[1.12] tracking-tight mb-4" id="hero-slide-headline">
+              We Believe Every Ride<br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-700 via-blue-700 to-indigo-800 dark:from-teal-300 dark:via-sky-300 dark:to-blue-400">
+                Deserves Expert Care.
+              </span>
+            </h1>
+
+            <div class="blue-accent-line"></div>
+
+            <p class="text-lg text-slate-600 dark:text-slate-300 max-w-xl mb-8 leading-relaxed font-normal" id="hero-slide-desc">
+              From everyday bicycle repairs to high-performance motorcycle maintenance, get reliable, certified service from experienced workshop mechanics using precision tools and genuine parts.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+              <a href="#booking" class="button button-primary">
+                <i class="fa-solid fa-calendar-check mr-2"></i> Book Your Repair
+              </a>
+              <a href="services.html" class="button button-secondary">
+                <i class="fa-solid fa-screwdriver-wrench mr-2"></i> View Our Services
+              </a>
+            </div>
+
+            <!-- Trust Performance Strip (High-Contrast Metric Cockpit) -->
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-200 dark:border-slate-700/80">
+              <div class="p-3.5 rounded-xl bg-white/95 border border-slate-200 shadow-sm dark:bg-slate-900/60 dark:border-slate-700/60">
+                <strong class="block text-2xl font-black text-blue-600 dark:text-blue-400 price-text">100%</strong>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-semibold">Transparent Estimates</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/95 border border-slate-200 shadow-sm dark:bg-slate-900/60 dark:border-slate-700/60">
+                <strong class="block text-2xl font-black text-emerald-600 dark:text-emerald-400 price-text">45 Min</strong>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-semibold">Express Turnaround</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/95 border border-slate-200 shadow-sm dark:bg-slate-900/60 dark:border-slate-700/60">
+                <strong class="block text-2xl font-black text-sky-600 dark:text-sky-400 price-text">OEM</strong>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 uppercase font-semibold">Certified Spares</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 3D Box Layered Stack (Matching Reference Screenshot) -->
+          <div class="lg:col-span-5 relative flex justify-center items-center py-6">
+            <!-- Glowing Ambient Aura -->
+            <div class="glow-blue-aura"></div>
+
+            <div class="hero-card-stack relative">
+              <!-- Background 3D Box (Vertically Taller, Inset Horizontally Behind Front Card) -->
+              <div class="hero-card-preview">
+                <img id="hero-preview-img" src="assets/images/home-1/slide-2-card.jpg" alt="Upcoming slide preview" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Foreground Active 3D Box Card -->
+              <div class="hero-card-active relative">
+                <img id="hero-active-img" src="assets/images/home-1/slide-1-card.jpg" alt="Precision Engine Diagnostics" class="w-full h-full object-cover" />
+                
+                <!-- Bottom Scrim Overlay for Crystal Readability -->
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/92 via-slate-950/45 to-transparent"></div>
+                
+                <!-- Bottom Content Overlay (Matching User Reference Image) -->
+                <div class="absolute bottom-6 left-6 right-16 text-white z-20">
+                  <span id="hero-active-tag" class="inline-block text-[11px] sm:text-xs font-extrabold tracking-widest uppercase text-teal-400 mb-1.5 drop-shadow-sm">
+                    PRECISION ENGINE DIAGNOSTICS
+                  </span>
+                  <h3 id="hero-active-title" class="text-white text-base sm:text-lg font-bold leading-snug drop-shadow-md">
+                    State-of-the-art computerized diagnostics & 40-point safety inspection.
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Up / Down Chevron Navigation Buttons (Matching Reference Screenshot) -->
+              <div class="hero-nav-controls">
+                <button type="button" class="hero-nav-btn hero-nav-prev" aria-label="Previous Slide">
+                  <i class="fa-solid fa-chevron-up"></i>
+                </button>
+                <button type="button" class="hero-nav-btn hero-nav-next" aria-label="Next Slide">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+
+              <!-- Floating Pagination Pill (Matching Reference Screenshot) -->
+              <div class="hero-pagination-pill" id="hero-dots-container" role="tablist" aria-label="Hero slide indicators">
+                <button type="button" class="hero-dot-indicator active" aria-label="Slide 1" role="tab" aria-selected="true"></button>
+                <button type="button" class="hero-dot-indicator" aria-label="Slide 2" role="tab" aria-selected="false"></button>
+                <button type="button" class="hero-dot-indicator" aria-label="Slide 3" role="tab" aria-selected="false"></button>
+                <button type="button" class="hero-dot-indicator" aria-label="Slide 4" role="tab" aria-selected="false"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 02 – Emergency Repair Assistance Strip (Adaptive Light & Dark Mood) -->
+    <section class="py-8 md:py-12 relative overflow-hidden bg-slate-50/80 dark:bg-[#060D1A] transition-colors duration-300">
+      <div class="container">
+        <!-- Main Emergency Triage Card (Borderless Clean Canvas) -->
+        <div class="relative rounded-3xl bg-white dark:bg-gradient-to-br dark:from-[#0B1728] dark:via-[#11223A] dark:to-[#0B1728] shadow-[0_20px_50px_-12px_rgba(20,45,78,0.08),0_2px_8px_rgba(15,23,42,0.03)] dark:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.7)] overflow-hidden transition-all duration-300">
+          
+          <!-- Top Emergency Status Accent Stripe -->
+          <div class="h-1.5 w-full bg-gradient-to-r from-amber-500 via-red-500 to-blue-600"></div>
+
+          <!-- Subtle Watermark Ambient Glow -->
+          <div class="absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-blue-500/5 dark:bg-blue-500/10 blur-3xl pointer-events-none"></div>
+
+          <div class="p-6 sm:p-8 lg:p-10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+              
+              <!-- Left Column: Headline & 4 Full-Width Breakdown Diagnostic Cards (lg:col-span-7) -->
+              <div class="lg:col-span-7 flex flex-col gap-6">
+                <div>
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-50 dark:bg-red-500/20 text-red-600 dark:text-red-400 border border-red-200/80 dark:border-red-500/30 text-xs font-extrabold uppercase tracking-wider shadow-sm">
+                      <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                      <span>Emergency Bay Triage</span>
+                    </div>
+                    <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Bay Open • Walk-ins Welcome
+                    </span>
+                  </div>
+
+                  <h2 class="text-2xl sm:text-3xl lg:text-[2.25rem] font-black text-slate-900 dark:text-white leading-tight">
+                    Unexpected Breakdown?<br />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-600 dark:from-sky-400 dark:via-blue-400 dark:to-teal-300">
+                      We Can Help Right Now.
+                    </span>
+                  </h2>
+                </div>
+
+                <!-- 4 Breakdown Issue Cards (Generous 2-Column Grid With Zero Text Truncation) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <!-- Issue 1: Flat Tyre -->
+                  <div class="group p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/70 hover:bg-white dark:hover:bg-slate-800 hover:border-amber-400 dark:hover:border-amber-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                    <div class="flex items-start gap-3.5">
+                      <div class="w-10 h-10 rounded-xl bg-amber-500/10 dark:bg-amber-400/20 text-amber-600 dark:text-amber-400 flex items-center justify-center flex-shrink-0 text-base">
+                        <i class="fa-solid fa-circle-dot"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-0.5">Flat Tyre & Punctures</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-snug mb-2">Puncture patch, inner tube replacement & rim bead seal.</p>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-700 dark:text-amber-300 bg-amber-100/70 dark:bg-amber-950/60 px-2.5 py-0.5 rounded-md">
+                          <i class="fa-solid fa-stopwatch"></i> 15 Min • From ₹50
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Issue 2: Loose/Failing Brakes -->
+                  <div class="group p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/70 hover:bg-white dark:hover:bg-slate-800 hover:border-rose-400 dark:hover:border-rose-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                    <div class="flex items-start gap-3.5">
+                      <div class="w-10 h-10 rounded-xl bg-rose-500/10 dark:bg-rose-400/20 text-rose-600 dark:text-rose-400 flex items-center justify-center flex-shrink-0 text-base">
+                        <i class="fa-solid fa-shield-halved"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-0.5">Failing / Loose Brakes</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-snug mb-2">Brake bleed, cable stretch & pad friction calibration.</p>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-rose-700 dark:text-rose-300 bg-rose-100/70 dark:bg-rose-950/60 px-2.5 py-0.5 rounded-md">
+                          <i class="fa-solid fa-triangle-exclamation"></i> Immediate Priority
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Issue 3: Broken Chains -->
+                  <div class="group p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/70 hover:bg-white dark:hover:bg-slate-800 hover:border-indigo-400 dark:hover:border-indigo-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                    <div class="flex items-start gap-3.5">
+                      <div class="w-10 h-10 rounded-xl bg-indigo-500/10 dark:bg-indigo-400/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center flex-shrink-0 text-base">
+                        <i class="fa-solid fa-link"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-0.5">Broken Chain & Snaps</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-snug mb-2">Master quick-link install & precision tensioning.</p>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-indigo-700 dark:text-indigo-300 bg-indigo-100/70 dark:bg-indigo-950/60 px-2.5 py-0.5 rounded-md">
+                          <i class="fa-solid fa-wrench"></i> OEM Links in Stock
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Issue 4: Gear Jam -->
+                  <div class="group p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-800/80 border border-slate-200/90 dark:border-slate-700/70 hover:bg-white dark:hover:bg-slate-800 hover:border-teal-400 dark:hover:border-teal-400 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200">
+                    <div class="flex items-start gap-3.5">
+                      <div class="w-10 h-10 rounded-xl bg-teal-500/10 dark:bg-teal-400/20 text-teal-600 dark:text-teal-400 flex items-center justify-center flex-shrink-0 text-base">
+                        <i class="fa-solid fa-gear"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <h4 class="text-sm font-bold text-slate-900 dark:text-white mb-0.5">Gear Shifting Jams</h4>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 leading-snug mb-2">Bent hanger laser check, cable indexing & lubrication.</p>
+                        <span class="inline-flex items-center gap-1 text-[11px] font-bold text-teal-700 dark:text-teal-300 bg-teal-100/70 dark:bg-teal-950/60 px-2.5 py-0.5 rounded-md">
+                          <i class="fa-solid fa-check-double"></i> Smooth Shifting
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Larger Visual Image & Workshop Hotline Below (lg:col-span-5) -->
+              <div class="lg:col-span-5 flex flex-col gap-5">
+                <!-- 1. Sized-Up Visual Section (Increased Image Size, Borderless Clean Card) -->
+                <div class="relative rounded-2xl overflow-hidden h-60 sm:h-64 lg:h-72 shadow-md group">
+                  <img src="assets/images/home-1/emergency-breakdown.jpg" alt="Roadside bicycle puncture assistance" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                  
+                  <!-- Floating Status Badges Over Image -->
+                  <div class="absolute top-3.5 left-3.5">
+                    <span class="bg-red-600 text-white font-extrabold text-[11px] px-3.5 py-1.5 rounded-full uppercase tracking-wider shadow-sm flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span> Rapid Bay Triage
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-3 left-3.5 right-3.5 flex items-center justify-between text-white text-xs font-semibold bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-xl">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-amber-400"></i> Central Workshop Bay</span>
+                    <span class="text-emerald-300 font-bold">Priority Intake</span>
+                  </div>
+                </div>
+
+                <!-- 2. Workshop Hotline Section (Directly Below Visual Section) -->
+                <div class="p-5 rounded-2xl bg-slate-50/90 dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-sm">
+                  <div class="flex items-center justify-between mb-3">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-slate-600 dark:text-slate-400">Workshop Hotline</span>
+                    <div class="text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                      <span>Direct mechanic dispatch</span>
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col gap-2.5">
+                    <a href="tel:+919876543210" class="button button-primary w-full">
+                      <i class="fa-solid fa-phone-volume text-base animate-bounce"></i>
+                      <span>Call: +91 98765 43210</span>
+                    </a>
+
+                    <a href="https://wa.me/919876543210?text=Hello%20BikeFix%2C%20I%20have%20an%20unexpected%20breakdown%20and%20need%20urgent%20assistance." target="_blank" rel="noopener noreferrer" class="button button-whatsapp w-full">
+                      <i class="fa-brands fa-whatsapp text-lg"></i>
+                      <span>WhatsApp Photo Triage</span>
+                    </a>
+                  </div>
+
+                  <div class="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 pt-3 mt-3 border-t border-slate-200 dark:border-slate-800">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-bolt text-amber-500"></i> &lt; 5m response</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-shield-halved text-blue-500"></i> No appointment</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-check text-emerald-500"></i> Free estimate</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 03 – Choose Your Vehicle (Two Large Image Panels) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title text-center max-w-2xl mx-auto">
+          <span class="eyebrow">Dedicated Specialists</span>
+          <h2>Choose Your Vehicle Category</h2>
+          <p>We provide dedicated tooling, specialized test rigs, and manufacturer-specified lubricants tailored specifically for motorcycles and bicycles.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Panel 1: Motorcycle Care -->
+          <div class="group relative rounded-3xl overflow-hidden shadow-xl border border-slate-300 dark:border-slate-800 bg-slate-950 text-white min-h-[460px] flex flex-col justify-end p-8 md:p-10 transition duration-500 hover:shadow-2xl hover:border-blue-500">
+            <img src="assets/images/home-1/motorcycle-care.jpg" alt="High performance motorcycle exhaust and engine maintenance" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+
+            <div class="relative z-10">
+              <span class="badge bg-blue-600 text-white text-xs font-bold uppercase tracking-wider mb-3">Motorcycle Care</span>
+              <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Motorcycle Maintenance & Diagnostics</h3>
+              <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
+                Comprehensive engine-related maintenance, valve clearances, brake bleed and pad replacements, high-speed tyre balancing, chain sprocket overhauls, and bumper-to-bumper electrical checkups.
+              </p>
+              <a href="services.html#motorcycle-services" class="inline-flex items-center gap-2 font-bold text-blue-400 hover:text-blue-300 group-hover:translate-x-2 transition">
+                Explore motorcycle care <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Panel 2: Bicycle Care -->
+          <div class="group relative rounded-3xl overflow-hidden shadow-xl border border-slate-300 dark:border-slate-800 bg-slate-950 text-white min-h-[460px] flex flex-col justify-end p-8 md:p-10 transition duration-500 hover:shadow-2xl hover:border-emerald-500">
+            <img src="assets/images/home-1/bicycle-care.jpg" alt="Precision bicycle mechanics and wheel truing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-60" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+
+            <div class="relative z-10">
+              <span class="badge bg-emerald-600 text-white text-xs font-bold uppercase tracking-wider mb-3">Bicycle Care</span>
+              <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Bicycle Drivetrain & Wheel Care</h3>
+              <p class="text-slate-300 text-sm md:text-base mb-6 leading-relaxed">
+                Specialized tubeless and clincher puncture repairs, derailleur cable tensioning, hydraulic disc brake bleeding, bottom bracket servicing, spoke tension balancing, and complete ultrasonic drivetrain de-greasing.
+              </p>
+              <a href="services.html#bicycle-services" class="inline-flex items-center gap-2 font-bold text-emerald-400 hover:text-emerald-300 group-hover:translate-x-2 transition">
+                Explore bicycle care <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 04 – Our Most Requested Repairs (4 Asymmetrical Cards with High Contrast) -->
+    <section class="section section-contrast-alt">
+      <div class="container">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="eyebrow">Quick Workshop Turnarounds</span>
+            <h2>Our Most Requested Repairs</h2>
+            <p>Fast diagnostic inspection, exact quote approvals, and dependable execution on common problems.</p>
+          </div>
+          <a href="services.html" class="button button-secondary mt-4 md:mt-0">
+            View All Services →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1: Tyre & Puncture -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/home-1/repair-puncture.jpg" alt="Closeup of technician patching a punctured tyre" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white font-bold text-xs backdrop-blur-sm border border-slate-700">Starts ₹50</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Tyre & Puncture Solutions</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Vulcanized cold patches, heavy-duty butyl tube replacements, bead seating, and tread wear inspection.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Avg. 20-30 mins</span>
+                <a href="services.html#service-puncture" class="hover:underline">Book Fix →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Brake Adjustment -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/home-1/repair-brakes.jpg" alt="Motorcycle and bicycle brake pad inspection" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white font-bold text-xs backdrop-blur-sm border border-slate-700">Starts ₹120</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Brake Adjustment & Bleed</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Caliper realignments, hydraulic line flushes, organic/ceramic pad replacements, and rotor true checks.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Avg. 30-45 mins</span>
+                <a href="services.html#service-brakes" class="hover:underline">Book Fix →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Chain Maintenance -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/home-1/repair-chain.jpg" alt="Bicycle chain cleaning and lubrication in workshop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white font-bold text-xs backdrop-blur-sm border border-slate-700">Starts ₹150</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Chain Clean & Tensioning</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                Degreasing bath, link wear stretch measurement, precision tension alignment, and weather-sealed lube.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Avg. 25-40 mins</span>
+                <a href="services.html#service-chain" class="hover:underline">Book Fix →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Gear Tuning -->
+          <div class="card-contrast-heroic flex flex-col group">
+            <div class="h-48 overflow-hidden relative">
+              <img src="assets/images/home-1/repair-gears.jpg" alt="Rear derailleur gear adjustment on bicycle" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 badge bg-slate-950/90 text-white font-bold text-xs backdrop-blur-sm border border-slate-700">Starts ₹180</span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <h4 class="font-bold text-lg mb-2">Gear Shifting Calibration</h4>
+              <p class="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                High/low limit screw adjustment, barrel tension calibration, hanger straightening, and smooth index checks.
+              </p>
+              <div class="mt-auto pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 font-bold">
+                <span>Avg. 30-50 mins</span>
+                <a href="services.html#service-gears" class="hover:underline">Book Fix →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 05 – What Happens After You Visit? (Process Timeline) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title text-center max-w-2xl mx-auto">
+          <span class="eyebrow">Clear & Honest Workflow</span>
+          <h2>What Happens After You Visit?</h2>
+          <p>We eliminate guesswork. Every step from drop-off to handover is mapped out with customer consultation and zero hidden charges.</p>
+        </div>
+
+        <div class="relative">
+          <!-- Desktop illuminated conduit line -->
+          <div class="hidden lg:block timeline-conduit"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 relative z-10">
+            <!-- Step 1 -->
+            <div class="card-contrast-heroic p-6 text-center flex flex-col items-center">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-lg shadow-blue-500/30">
+                1
+              </div>
+              <h4 class="text-base font-bold mb-2">Vehicle Drop-off</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">Arrive at our workshop. Check in with our service advisor and outline vehicle symptoms.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="card-contrast-heroic p-6 text-center flex flex-col items-center">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-lg shadow-blue-500/30">
+                2
+              </div>
+              <h4 class="text-base font-bold mb-2">Initial Inspection</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">Mechanic performs a 20-point mechanical evaluation to diagnose root causes.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="card-contrast-heroic p-6 text-center flex flex-col items-center">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-lg shadow-blue-500/30">
+                3
+              </div>
+              <h4 class="text-base font-bold mb-2">Estimate Shared</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">Transparent digital quotation shared with itemized labor and parts options.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="card-contrast-heroic p-6 text-center flex flex-col items-center">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-lg shadow-blue-500/30">
+                4
+              </div>
+              <h4 class="text-base font-bold mb-2">Customer Approval</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">We only begin repair work once you have reviewed and approved the quote.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="card-contrast-heroic p-6 text-center flex flex-col items-center">
+              <div class="w-14 h-14 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-lg shadow-blue-500/30">
+                5
+              </div>
+              <h4 class="text-base font-bold mb-2">Repair & QC</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">Certified technician executes repairs followed by a rigorous safety check.</p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="card-contrast-heroic p-6 text-center flex flex-col items-center">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xl mb-4 shadow-lg shadow-emerald-500/30">
+                6
+              </div>
+              <h4 class="text-base font-bold mb-2">Vehicle Collection</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">Pick up your road-ready ride with printed service log and parts warranty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 06 – Our Workshop Standards (Image Left, Numbered Standards Right) -->
+    <section class="section section-contrast-alt">
+      <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Workshop Image Left -->
+          <div class="lg:col-span-6">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
+              <img src="assets/images/home-1/workshop-standards.jpg" alt="Organized BikeFix tool wall and workshop facility" class="w-full h-[520px] object-cover" />
+              <div class="glass-cockpit-card absolute bottom-6 left-6 p-4 rounded-xl max-w-xs">
+                <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase mb-1">
+                  <span class="beacon-dot bg-emerald-400"></span> Certified Environment
+                </div>
+                <p class="text-xs text-slate-300">Clean bay workflows, torque-calibrated tooling, and safety protocols.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Numbered Standards Right -->
+          <div class="lg:col-span-6">
+            <span class="eyebrow">Professional Quality Commitment</span>
+            <h2>Good Repairs Begin With Good Standards.</h2>
+            <div class="blue-accent-line"></div>
+            <p class="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+              We reject the chaotic disorder of typical neighborhood garages. BikeFix runs on calibrated automotive-grade standards to protect your machinery and guarantee roadworthiness.
+            </p>
+
+            <div class="space-y-4">
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center flex-shrink-0 shadow-md">1</span>
+                <div>
+                  <h4 class="text-base font-bold mb-1">Organized Tools and Workspace</h4>
+                  <p class="text-slate-500 text-xs">Every tool has a designated calibrated station, preventing damage to fasteners, delicate carbon, and alloy frames.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center flex-shrink-0 shadow-md">2</span>
+                <div>
+                  <h4 class="text-base font-bold mb-1">Proper Initial & Post-Inspection</h4>
+                  <p class="text-slate-500 text-xs">We verify wear tolerances on chains, brake discs, bearings, and cables before pronouncing any job complete.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center flex-shrink-0 shadow-md">3</span>
+                <div>
+                  <h4 class="text-base font-bold mb-1">Clear, Binding Repair Estimates</h4>
+                  <p class="text-slate-500 text-xs">No surprise add-ons. If an unforeseen defect is discovered during disassembly, we halt and seek your explicit permission.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center flex-shrink-0 shadow-md">4</span>
+                <div>
+                  <h4 class="text-base font-bold mb-1">Suitable, Tested Replacement Components</h4>
+                  <p class="text-slate-500 text-xs">We stock genuine OEM and manufacturer-tested aftermarket spares engineered to exact tolerances.</p>
+                </div>
+              </div>
+
+              <div class="card p-4 flex gap-4 items-start">
+                <span class="w-10 h-10 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center flex-shrink-0 shadow-md">5</span>
+                <div>
+                  <h4 class="text-base font-bold mb-1">Final Dual Safety Checks</h4>
+                  <p class="text-slate-500 text-xs">Every serviced bike undergoes a secondary verification by our shop foreman before handover.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 07 – Customer Experiences (1 Featured + 2 Review Cards) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title text-center max-w-2xl mx-auto">
+          <span class="eyebrow">Verified Reviews</span>
+          <h2>Trusted by Commuters and Enthusiasts</h2>
+          <p>Read genuine feedback from riders whose daily journeys and weekend tours depend on BikeFix maintenance.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Featured Large Testimonial (7 Cols) -->
+          <div class="lg:col-span-7 card bg-gradient-to-br from-[#0B1728] via-[#142D4E] to-blue-900 text-white p-8 md:p-10 flex flex-col justify-between border border-blue-500/30 shadow-2xl">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="flex text-amber-400 gap-1 text-lg">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="badge bg-blue-500/30 text-blue-200 text-xs">Featured Story</span>
+              </div>
+              <blockquote class="text-xl md:text-2xl font-bold leading-relaxed mb-6 text-slate-100">
+                “BikeFix completely transformed how my KTM Duke rides. The mechanics diagnosed a throttle cable friction issue that two other shops missed. Outstanding honesty, zero markups, and punctual delivery.”
+              </blockquote>
+            </div>
+
+            <div class="flex items-center gap-4 pt-6 border-t border-blue-800">
+              <div class="w-14 h-14 rounded-full overflow-hidden border-2 border-blue-400 flex-shrink-0">
+                <img src="assets/images/home-1/customer-handover.jpg" alt="Happy customer shaking hands with mechanic" class="w-full h-full object-cover" />
+              </div>
+              <div>
+                <strong class="text-lg block text-white">Rajesh Narayanan</strong>
+                <span class="text-xs text-blue-300">Motorcycle Rider • KTM Duke 390</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Two Smaller Review Cards (5 Cols) -->
+          <div class="lg:col-span-5 flex flex-col gap-6 justify-between">
+            <div class="card-contrast-heroic p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex text-amber-400 gap-1 text-sm mb-3">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                  “Brought in my gravel bicycle with bent derailleur hanger and misaligned spokes. The truing and shift calibration was immaculate. It shifts like clockwork now.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
+                <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+                  SS
+                </div>
+                <div>
+                  <strong class="text-xs block">Sunita Sharma</strong>
+                  <span class="text-[11px] text-slate-500">Weekend Cyclist • Trek Checkpoint</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-contrast-heroic p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex text-amber-400 gap-1 text-sm mb-3">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
+                  “The online booking made drop-off seamless. I got a detailed estimate message on WhatsApp within 20 minutes of drop-off. Truly a premium repair experience.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-100 dark:border-slate-800">
+                <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-sm">
+                  AK
+                </div>
+                <div>
+                  <strong class="text-xs block">Arvind Kumar</strong>
+                  <span class="text-[11px] text-slate-500">Daily Commuter • Royal Enfield Hunter</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 08 – Book Your Workshop Visit (Gradient with outline gear graphic) -->
+    <section class="section py-20 relative overflow-hidden bg-gradient-to-br from-[#070F1E] via-[#0F233D] to-[#142D4E] text-white border-t border-slate-800" id="booking">
+      <!-- Huge Outline Gear Graphic -->
+      <div class="absolute -right-20 -bottom-20 w-[500px] h-[500px] pointer-events-none opacity-10 rotate-gear">
+        <svg viewBox="0 0 100 100" fill="none" stroke="#FFFFFF" stroke-width="2">
+          <circle cx="50" cy="50" r="42" stroke-dasharray="4 4"/>
+          <circle cx="50" cy="50" r="28"/>
+          <line x1="50" y1="8" x2="50" y2="92" stroke-width="3"/>
+          <line x1="8" y1="50" x2="92" y2="50" stroke-width="3"/>
+          <line x1="20" y1="20" x2="80" y2="80" stroke-width="3"/>
+          <line x1="20" y1="80" x2="80" y2="20" stroke-width="3"/>
+        </svg>
+      </div>
+
+      <div class="container relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase mb-4">
+              Schedule Your Drop-Off
+            </span>
+            <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Let's Get Your Ride Ready Again.</h2>
+            <p class="text-slate-300 mb-6 leading-relaxed">
+              Choose your vehicle type, tell us what needs attention, and pick a convenient workshop drop-off window. We will review the diagnosis and confirm your slot.
+            </p>
+            <div class="space-y-3 text-sm text-slate-300">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check-circle text-emerald-400"></i> No advance booking fees
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check-circle text-emerald-400"></i> Free preliminary check with every visit
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-check-circle text-emerald-400"></i> 100% written quotation approval before work
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="bg-slate-950 rounded-3xl p-8 md:p-10 shadow-2xl text-white border border-blue-500/30">
+              <h3 class="text-2xl font-bold mb-6 text-white">Workshop Service Reservation</h3>
+
+              <form data-booking-form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="form-group">
+                    <label for="book-vehicle">Vehicle Type</label>
+                    <select id="book-vehicle" class="form-control" required>
+                      <option value="">Select vehicle type...</option>
+                      <option value="motorcycle">Motorcycle</option>
+                      <option value="bicycle">Bicycle</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="book-model">Vehicle Brand & Model</label>
+                    <input id="book-model" type="text" class="form-control" placeholder="e.g. Royal Enfield Hunter / Trek FX3" required />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="form-group">
+                    <label for="book-service">Requested Service</label>
+                    <select id="book-service" class="form-control" required>
+                      <option value="">Select service need...</option>
+                      <option value="puncture">Tyre Puncture & Replacement</option>
+                      <option value="brakes">Brake System Inspection & Pads</option>
+                      <option value="chain">Chain & Drivetrain Overhaul</option>
+                      <option value="gears">Gear Tuning & Shifting Calibration</option>
+                      <option value="general">Comprehensive General Servicing</option>
+                      <option value="diagnosis">General Mechanical Diagnostic</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="book-date">Preferred Drop-off Date</label>
+                    <input id="book-date" type="date" class="form-control" required />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div class="form-group">
+                    <label for="book-name">Your Full Name</label>
+                    <input id="book-name" type="text" class="form-control" placeholder="John Doe" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="book-phone">Phone / WhatsApp Number</label>
+                    <input id="book-phone" type="tel" class="form-control" placeholder="+91 98765 43210" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="book-problem">Describe Any Specific Symptoms</label>
+                  <textarea id="book-problem" class="form-control" rows="2" placeholder="e.g. squeaking rear brake, chain slipping in 4th gear..."></textarea>
+                </div>
+
+                <button type="submit" class="button button-primary w-full">
+                  <i class="fa-solid fa-calendar-check mr-2"></i> Schedule a Repair
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div class="lg:col-span-2">
+          <a href="index.html" class="inline-block mb-4">
+            <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" style="height: 48px; filter: brightness(0) invert(1);" />
+          </a>
+          <p class="text-slate-400 text-sm max-w-sm mb-6 leading-relaxed">
+            BikeFix is a premium motorcycle and bicycle service workshop. We deliver precision mechanical maintenance, certified safety inspections, transparent pricing, and genuine replacement parts.
+          </p>
+          <div class="flex items-center gap-3 text-xs text-slate-400">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span>Workshop Open: Mon – Sat, 8:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Workshop Services</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="services.html#motorcycle-services" class="hover:text-blue-400">Motorcycle Engine Care</a></li>
+            <li><a href="services.html#motorcycle-services" class="hover:text-blue-400">Brake Overhauls & Pads</a></li>
+            <li><a href="services.html#bicycle-services" class="hover:text-blue-400">Bicycle Gear Derailleur Tuning</a></li>
+            <li><a href="services.html#bicycle-services" class="hover:text-blue-400">Precision Wheel Truing</a></li>
+            <li><a href="services.html#diagnosis" class="hover:text-blue-400">Diagnostic Inspection</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Spare Parts & Pricing</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Tyres & Tubes</a></li>
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Braking Components</a></li>
+            <li><a href="spare-parts.html" class="hover:text-blue-400">Chains & Sprockets</a></li>
+            <li><a href="pricing.html" class="hover:text-blue-400">Transparent Price Packages</a></li>
+            <li><a href="pricing.html#estimator" class="hover:text-blue-400">Online Cost Estimator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-base mb-4 tracking-wide">Workshop Hub</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot mt-1 text-blue-400"></i>
+              <span>42 Mechanics Way, Central Auto District</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-blue-400"></i>
+              <a href="tel:+919876543210" class="hover:text-white">+91 98765 43210</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+              <a href="https://wa.me/919876543210" target="_blank" class="hover:text-white">+91 98765 43210 (Direct)</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-blue-400"></i>
+              <a href="mailto:service@bikefix.in" class="hover:text-white">service@bikefix.in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span class="current-year">2026</span> BIKEFIX Workshop Technologies. All rights reserved. Ride Smooth. Travel Happy.
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom Bar -->
+  <div class="sticky-mobile-bar">
+    <div class="sticky-info">
+      <strong>Fast Workshop Booking</strong>
+      <small>Motorcycles & Bicycles</small>
+    </div>
+    <div class="sticky-actions">
+      <a href="tel:+919876543210" class="icon-button" style="background:#1E3A8A; color:#FFF; border:none;" aria-label="Call Workshop">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="#booking" class="button button-primary" style="padding: 8px 16px; font-size: 0.85rem; min-height: 40px;">
+        Book Now
+      </a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

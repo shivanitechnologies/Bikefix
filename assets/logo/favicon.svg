@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bfFaviconBlue2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="bfFaviconNavy2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#142D4E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded pill/circle -->
+  <rect width="64" height="64" rx="16" fill="url(#bfFaviconNavy2)"/>
+
+  <!-- Mechanical Outer Gear Teeth -->
+  <path d="M32 8
+           L34 8 L35 12 L39 13 L42 10 L44 12 L42 16 L46 19 L49 17 L51 19 L48 23 L51 27 L55 26 L56 28 L52 32
+           L56 36 L55 38 L51 37 L48 41 L51 45 L49 47 L46 45 L42 48 L44 52 L42 54 L39 51 L35 52 L34 56
+           L32 56 L30 56 L29 52 L25 51 L22 54 L20 52 L22 48 L18 45 L15 47 L13 45 L16 41 L13 37 L9 38
+           L8 36 L12 32 L8 28 L9 26 L13 27 L16 23 L13 19 L15 17 L18 19 L22 16 L20 12 L22 10 L25 13
+           L29 12 L30 8 Z" 
+        fill="#38BDF8" opacity="0.3" />
+
+  <!-- Bicycle Wheel Outer Rim -->
+  <circle cx="32" cy="32" r="20" stroke="url(#bfFaviconBlue2)" stroke-width="3.5" fill="none"/>
+  <circle cx="32" cy="32" r="15" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+
+  <!-- Bicycle Spokes -->
+  <line x1="32" y1="12" x2="32" y2="52" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="12" y1="32" x2="52" y2="32" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="18" y1="18" x2="46" y2="46" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="18" y1="46" x2="46" y2="18" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Inner Wheel Hub -->
+  <circle cx="32" cy="32" r="6" fill="#142D4E" stroke="#38BDF8" stroke-width="2"/>
+
+  <!-- Diagonal Wrench Across Wheel -->
+  <g transform="rotate(-35 32 32)">
+    <rect x="30" y="8" width="4" height="48" rx="2" fill="#FFFFFF"/>
+    <!-- Top Open Head -->
+    <path d="M27 10 C27 6 37 6 37 10 L35 13 C33 11 31 11 29 13 Z" fill="#FFFFFF"/>
+    <!-- Bottom Box Ring Head -->
+    <circle cx="32" cy="51" r="6" fill="#FFFFFF"/>
+    <circle cx="32" cy="51" r="3" fill="#142D4E"/>
+  </g>
+</svg>
+

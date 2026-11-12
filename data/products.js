@@ -1,0 +1,172 @@
+/**
+ * BIKEFIX – Genuine Spare Parts & Accessories Data Module
+ * Ride Smooth. Travel Happy.
+ */
+
+export const SPARE_PARTS = [
+  {
+    id: "part-01",
+    name: "Michelin City Pro Tubeless Tyre",
+    vehicle: "motorcycle",
+    category: "tyres",
+    sku: "TYR-MCH-909018",
+    price: 1899,
+    originalPrice: 2200,
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 142,
+    badge: "Bestseller",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-tyre-michelin.jpg",
+    specs: "Size: 90/90-18 | Reinforced Puncture Resistance | Deep water-siping tread"
+  },
+  {
+    id: "part-02",
+    name: "Continental Tour 28 Allround Inner Tube",
+    vehicle: "bicycle",
+    category: "tyres",
+    sku: "TUB-CNT-700C-PV",
+    price: 349,
+    originalPrice: 420,
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 88,
+    badge: "In Stock",
+    badgeType: "green",
+    image: "assets/images/spare-parts/part-tube-continental.jpg",
+    specs: "Size: 700x32-47c | 42mm Presta Valve | Seamless Butyl Construction"
+  },
+  {
+    id: "part-03",
+    name: "Brembo Sintered High-Friction Brake Pads",
+    vehicle: "motorcycle",
+    category: "brakes",
+    sku: "BRK-BRM-07BB04SA",
+    price: 1450,
+    originalPrice: 1650,
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 64,
+    badge: "OEM Grade",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-brakes.jpg",
+    specs: "Compound: Sintered Metal | Heat-fade resistant up to 600°C"
+  },
+  {
+    id: "part-04",
+    name: "Shimano SM-RT66 160mm 6-Bolt Disc Rotor",
+    vehicle: "bicycle",
+    category: "brakes",
+    sku: "ROT-SHM-RT66-160",
+    price: 1199,
+    originalPrice: 1350,
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 91,
+    badge: "Popular",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-brake-rotors.jpg",
+    specs: "Diameter: 160mm | 6-Bolt ISO Mount | Stainless Steel Construction"
+  },
+  {
+    id: "part-05",
+    name: "DID 520 Heavy-Duty O-Ring Drive Chain",
+    vehicle: "motorcycle",
+    category: "chains",
+    sku: "CHN-DID-520VX3-120",
+    price: 2650,
+    originalPrice: 2990,
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 119,
+    badge: "High Durability",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-chain.jpg",
+    specs: "Pitch: 520 | 120 Links | Sealed X-Ring Design for 20,000+ km longevity"
+  },
+  {
+    id: "part-06",
+    name: "Motul 7100 10W-50 4T 100% Synthetic Engine Oil",
+    vehicle: "motorcycle",
+    category: "lubricants",
+    sku: "LUB-MTL-7100-10W50",
+    price: 920,
+    originalPrice: 1050,
+    inStock: true,
+    rating: 5.0,
+    reviewsCount: 230,
+    badge: "Top Rated",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-synthetic-oil.jpg",
+    specs: "API SN / JASO MA2 Certified | Ester Core Technology | 1 Litre"
+  },
+  {
+    id: "part-07",
+    name: "NGK Laser Iridium Long-Life Spark Plug",
+    vehicle: "motorcycle",
+    category: "engine",
+    sku: "IGN-NGK-CR9EIX",
+    price: 680,
+    originalPrice: 750,
+    inStock: true,
+    rating: 4.9,
+    reviewsCount: 78,
+    badge: "OEM Spec",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-spark-plug.jpg",
+    specs: "0.6mm Laser Welded Iridium Tip | Trivalent Metal Plating"
+  },
+  {
+    id: "part-08",
+    name: "Ergon GE1 Factory Lock-On Handlebar Grips",
+    vehicle: "bicycle",
+    category: "accessories",
+    sku: "ACC-ERG-GE1-BLK",
+    price: 1850,
+    originalPrice: 2100,
+    inStock: true,
+    rating: 4.8,
+    reviewsCount: 52,
+    badge: "Ergonomic",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-handle-grips.jpg",
+    specs: "Gravity Control Rubber | Integrated Aluminum Clamp | 110g per pair"
+  },
+  {
+    id: "part-09",
+    name: "Cree XML-T6 1200-Lumen Rechargeable LED Headlamp",
+    vehicle: "bicycle",
+    category: "accessories",
+    sku: "ACC-LED-CREE-1200",
+    price: 1499,
+    originalPrice: 1799,
+    inStock: true,
+    rating: 4.7,
+    reviewsCount: 105,
+    badge: "Waterproof IPX6",
+    badgeType: "green",
+    image: "assets/images/spare-parts/part-led-headlamp.jpg",
+    specs: "1200 Lumens Output | USB-C Fast Charging | 4400mAh Battery"
+  },
+  {
+    id: "part-10",
+    name: "Master Lock High-Security Steel Cable Helmet Lock",
+    vehicle: "motorcycle",
+    category: "accessories",
+    sku: "ACC-LCK-CAB-001",
+    price: 799,
+    originalPrice: 950,
+    inStock: true,
+    rating: 4.6,
+    reviewsCount: 44,
+    badge: "Theft Deterrent",
+    badgeType: "blue",
+    image: "assets/images/spare-parts/part-helmet-lock.jpg",
+    specs: "4-Digit Resettable Combination | Vinyl-Coated Braided Steel"
+  }
+];
+
+if (typeof window !== "undefined") {
+  window.SPARE_PARTS = SPARE_PARTS;
+}
+

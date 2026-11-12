@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /login.html
+Disallow: /signup.html
+
+Sitemap: https://bikefix.example.com/sitemap.xml
+
