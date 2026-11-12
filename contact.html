@@ -153,51 +153,29 @@
   </div>
 
   <main>
-    <!-- Section 01 – Dual-Mood Automotive Stage Hero: Workshop Reception & Drop-Off with Full-Bleed Location Background -->
-    <section class="hero-automotive-stage relative pt-16 pb-24 overflow-hidden">
-      <!-- Full-Bleed Panoramic Automotive Stage Background Image Spanning Entire Hero -->
-      <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="assets/images/contact/workshop-location.jpg"
-          alt="BikeFix central workshop facility exterior and bay driveway"
-          class="w-full h-full object-cover object-center opacity-15 dark:opacity-30 scale-105 filter brightness-105 contrast-105 dark:brightness-75 dark:contrast-125 transition-all duration-300" />
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/60 dark:from-[#070F1E] dark:via-[#070F1E]/90 dark:to-[#070F1E]/75 transition-all duration-300">
-        </div>
-        <div
-          class="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-white/70 dark:from-[#070F1E] dark:via-transparent dark:to-[#070F1E]/80 transition-all duration-300">
-        </div>
-      </div>
-
-      <div class="bg-mechanical-grid absolute inset-0 z-0 pointer-events-none"></div>
-
-      <!-- Animated Light Streak -->
-      <div class="light-streak"></div>
-
+    <!-- Section 01 – Workshop Reception Banner & 4-Column Dispatch Bar -->
+    <section class="relative pt-14 pb-16 bg-gradient-to-b from-slate-100/80 via-white to-white dark:from-[#0B1629] dark:via-[#070F1E] dark:to-[#070F1E] border-b border-slate-200 dark:border-slate-800 overflow-hidden">
       <div class="container relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div class="lg:col-span-7">
-            <div
-              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 dark:bg-blue-500/20 dark:border-blue-400/30 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-5">
-              <span class="beacon-dot bg-blue-500"></span>
-              Central Hub & Service Drop-Off
+        <!-- Wide Reception Showcase Split -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-10">
+          <div class="lg:col-span-6">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 dark:bg-emerald-500/15 dark:border-emerald-400/30 dark:text-emerald-300 text-xs font-bold uppercase tracking-wider mb-5">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              Central Hub Open • Accepting Walk-In Drop-Offs
             </div>
 
-            <h1 class="text-slate-900 dark:text-white mb-4 leading-tight">
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4 leading-tight tracking-tight">
               Your Local Workshop Is <br class="hidden sm:inline" />
-              <span
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-800 dark:from-blue-300 dark:via-sky-200 dark:to-white">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-800 dark:from-blue-300 dark:via-sky-200 dark:to-white">
                 Ready to Help.
               </span>
             </h1>
 
-            <div class="blue-accent-line"></div>
-
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-8 max-w-xl">
-              Visit our central workshop facility, consult directly with certified master mechanics, enquire about
-              genuine part stock, or schedule an express vehicle drop-off.
+            <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-7 max-w-xl">
+              Visit our central service hub, consult directly with certified master technicians, enquire about OEM stock, or drop your bike off for express 5-minute diagnostic triage.
             </p>
 
-            <div class="flex flex-wrap gap-4 items-center">
+            <div class="flex flex-wrap gap-3 items-center">
               <a href="#drop-off" class="button button-primary">
                 <i class="fa-solid fa-clipboard-list mr-2"></i> Drop-Off Guide
               </a>
@@ -208,56 +186,55 @@
                 <i class="fa-solid fa-diamond-turn-right mr-2"></i> GPS Navigation
               </a>
             </div>
+          </div>
 
-            <!-- Workshop Telemetry Stats -->
-            <div class="grid grid-cols-3 gap-6 pt-10 mt-10 border-t border-slate-200 dark:border-slate-700/60 max-w-lg">
-              <div>
-                <div class="text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-white price-text">24 Bays</div>
-                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-0.5">Active Lifts
-                </div>
-              </div>
-              <div>
-                <div class="text-2xl lg:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400 price-text">&lt;
-                  15 min</div>
-                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-0.5">Check-In Speed
-                </div>
-              </div>
-              <div>
-                <div class="text-2xl lg:text-3xl font-extrabold text-blue-600 dark:text-blue-400 price-text">6 Days
-                </div>
-                <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-0.5">8am – 8pm Open
-                </div>
-              </div>
+          <!-- Wide Architectural Exterior Image (Clean borderless showcase) -->
+          <div class="lg:col-span-6">
+            <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200/80 dark:border-slate-800 aspect-[16/10]">
+              <img src="assets/images/contact/contact-hero.jpg" alt="BikeFix workshop exterior and service reception" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom 4-Column Quick Reception & Telemetry Strip -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5">
+            <span class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <div>
+              <strong class="block text-sm font-bold text-slate-900 dark:text-white">Central Auto District</strong>
+              <span class="text-xs text-slate-500 dark:text-slate-400">42 Mechanics Way</span>
             </div>
           </div>
 
-          <!-- Hero Right: Workshop Exterior Framed Card -->
-          <div class="lg:col-span-5 relative">
-            <div
-              class="glass-cockpit-card p-3 rounded-3xl relative border border-slate-200/80 dark:border-slate-800 shadow-xl">
-              <div class="rounded-2xl overflow-hidden h-[380px] relative">
-                <img src="assets/images/contact/contact-hero.jpg" alt="BikeFix workshop exterior and service reception"
-                  class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5">
+            <span class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-stopwatch"></i>
+            </span>
+            <div>
+              <strong class="block text-sm font-bold text-slate-900 dark:text-white price-text">&lt; 15 Min Intake</strong>
+              <span class="text-xs text-slate-500 dark:text-slate-400">Fast Bay Check-In</span>
+            </div>
+          </div>
 
-                <!-- Floating Live Status Badge -->
-                <div
-                  class="absolute top-4 left-4 bg-white/95 dark:bg-slate-950/90 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700/80 rounded-xl px-3.5 py-2 text-xs flex items-center gap-2 backdrop-blur-md shadow-md">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span class="font-bold">Workshop Status: Open for Drop-offs</span>
-                </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5">
+            <span class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-warehouse"></i>
+            </span>
+            <div>
+              <strong class="block text-sm font-bold text-slate-900 dark:text-white price-text">24 Active Lifts</strong>
+              <span class="text-xs text-slate-500 dark:text-slate-400">Moto &amp; Cycle Bays</span>
+            </div>
+          </div>
 
-                <div
-                  class="absolute bottom-4 left-4 right-4 bg-white/95 dark:bg-slate-950/90 border border-slate-200 dark:border-slate-700/80 text-slate-900 dark:text-white p-3.5 rounded-xl text-xs backdrop-blur-md shadow-md flex items-center justify-between">
-                  <div>
-                    <strong class="block text-slate-900 dark:text-white">Central Hub Reception</strong>
-                    <span class="text-slate-500 dark:text-slate-400">42 Mechanics Way, Central Auto District</span>
-                  </div>
-                  <a href="#map-section" class="button button-primary py-1 px-3 text-xs min-h-[32px]">
-                    Directions
-                  </a>
-                </div>
-              </div>
+          <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5">
+            <span class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+              <i class="fa-regular fa-clock"></i>
+            </span>
+            <div>
+              <strong class="block text-sm font-bold text-slate-900 dark:text-white price-text">8 AM – 8 PM</strong>
+              <span class="text-xs text-slate-500 dark:text-slate-400">Mon – Sat Service</span>
             </div>
           </div>
         </div>
