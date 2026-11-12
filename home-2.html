@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
@@ -71,9 +71,9 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-[#080E1A] text-slate-100">
+<body>
   <!-- Header Component -->
-  <header class="site-header bg-slate-950/80 border-b border-slate-800">
+  <header class="site-header">
     <div class="container nav-wrap">
       <a href="index.html" class="brand" aria-label="BikeFix Home">
         <img src="assets/images/logo/bikefix-logo.svg" alt="BikeFix" class="brand-logo-img" />
@@ -90,7 +90,7 @@
 
       <div class="nav-actions">
         <button class="icon-button" data-theme-toggle aria-label="Toggle theme">
-          <i class="fa-solid fa-sun" aria-hidden="true"></i>
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
         </button>
         <button class="icon-button" data-rtl-toggle aria-label="Toggle text direction">
           <i class="fa-solid fa-align-right" aria-hidden="true"></i>
@@ -131,12 +131,12 @@
 
   <main>
     <!-- Section 01 – Cinematic Hero: Beyond Repairs. Built for Every Ride. -->
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-950">
+    <section class="hero-automotive-stage relative min-h-[85vh] flex items-center overflow-hidden">
       <!-- Full-screen Visual Background with Off-Center Motorcycle Subject -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="assets/images/home-2/hero-cinematic.jpg" alt="High performance sports motorcycle inspection" class="w-full h-full object-cover object-right md:object-center opacity-40 scale-105 filter contrast-125" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#070F1E] via-[#070F1E]/85 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#070F1E] via-transparent to-[#070F1E]/80"></div>
+        <img src="assets/images/home-2/hero-cinematic.jpg" alt="High performance sports motorcycle inspection" class="w-full h-full object-cover object-right md:object-center opacity-20 dark:opacity-35 scale-105 filter brightness-105 contrast-105 dark:brightness-90 dark:contrast-125 transition-all duration-300" />
+        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/45 dark:from-[#070F1E] dark:via-[#070F1E]/85 dark:to-transparent transition-all duration-300"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-white/75 dark:from-[#070F1E] dark:via-transparent dark:to-[#070F1E]/80 transition-all duration-300"></div>
       </div>
 
       <div class="bg-mechanical-grid absolute inset-0 z-0 pointer-events-none"></div>
@@ -144,18 +144,19 @@
       <!-- Animated Blue Light Streak -->
       <div class="light-streak"></div>
 
-      <div class="container relative z-10 py-24">
+      <div class="container relative z-10 py-16 lg:py-24">
         <div class="max-w-3xl">
-          <span class="badge bg-blue-600/30 text-blue-400 font-bold uppercase tracking-widest text-xs px-4 py-1.5 mb-6 border border-blue-500/30">
+          <span class="inline-flex items-center gap-2 badge bg-blue-50 text-blue-700 font-bold uppercase tracking-widest text-xs px-4 py-1.5 mb-6 border border-blue-200 dark:bg-blue-600/30 dark:text-blue-300 dark:border-blue-500/30">
+            <span class="beacon-dot bg-blue-600 dark:bg-blue-400"></span>
             Automotive Engineering Standards
           </span>
           
-          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white leading-none tracking-tight mb-6">
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-none tracking-tight mb-6">
             Beyond Repairs.<br />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Built for Every Ride.</span>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-800 dark:from-blue-400 dark:to-indigo-400">Built for Every Ride.</span>
           </h1>
 
-          <p class="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed font-normal max-w-2xl">
+          <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-10 leading-relaxed font-normal max-w-2xl">
             A premium repair experience designed for riders who care about performance, safety, and mechanical longevity. Micro-adjusted by master certified technicians.
           </p>
 
@@ -169,18 +170,18 @@
           </div>
 
           <!-- Editorial Metric Strip -->
-          <div class="grid grid-cols-3 gap-6 sm:gap-10 pt-12 mt-12 border-t border-slate-800/80">
+          <div class="grid grid-cols-3 gap-6 sm:gap-10 pt-12 mt-12 border-t border-slate-200 dark:border-slate-800/80">
             <div>
-              <div class="text-3xl lg:text-4xl font-extrabold text-white price-text">0.05 mm</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Wheel Truing Precision</div>
+              <div class="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white price-text">0.05 mm</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1">Wheel Truing Precision</div>
             </div>
             <div>
-              <div class="text-3xl lg:text-4xl font-extrabold text-blue-400 price-text">100%</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Torque Calibration</div>
+              <div class="text-3xl lg:text-4xl font-extrabold text-blue-600 dark:text-blue-400 price-text">100%</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1">Torque Calibration</div>
             </div>
             <div>
-              <div class="text-3xl lg:text-4xl font-extrabold text-white price-text">24 Bay</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">High-Tech Facility</div>
+              <div class="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white price-text">24 Bay</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 uppercase tracking-wider mt-1">High-Tech Facility</div>
             </div>
           </div>
         </div>
@@ -188,47 +189,47 @@
     </section>
 
     <!-- Section 02 – The Repair Expertise Showcase (3 Horizontally Arranged Editorial Panels) -->
-    <section class="section bg-slate-900/60 border-t border-b border-slate-800">
+    <section class="section section-contrast-alt">
       <div class="container">
         <div class="section-title">
-          <span class="eyebrow text-blue-400">Engineering Disciplines</span>
-          <h2 class="text-white">The Repair Expertise Showcase</h2>
-          <p class="text-slate-400">Three distinct specializations where mechanical knowledge meets modern precision tooling.</p>
+          <span class="eyebrow">Engineering Disciplines</span>
+          <h2>The Repair Expertise Showcase</h2>
+          <p class="text-slate-600 dark:text-slate-400">Three distinct specializations where mechanical knowledge meets modern precision tooling.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Editorial Panel 1: Precision Inspection -->
-          <div class="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 flex flex-col transition duration-300 hover:border-blue-500/50">
+          <div class="card-contrast-heroic flex flex-col group">
             <div class="h-64 overflow-hidden relative">
               <img src="assets/images/home-2/expertise-engine.jpg" alt="Mechanic using ratchet wrench to service motorcycle engine" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-transparent to-transparent"></div>
               <span class="absolute top-4 left-4 badge bg-blue-600 text-white text-xs">Pillar 01</span>
             </div>
             <div class="p-6 md:p-8 flex flex-col flex-grow">
-              <h3 class="text-xl font-bold text-white mb-3">Precision Engine & Diagnostics</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Precision Engine & Diagnostics</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
                 Engine valve lash tolerances, compression testing, fuel delivery synchronization, and computerized diagnostic port scans for high-capacity performance engines.
               </p>
-              <div class="mt-auto pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-blue-400 font-semibold">
-                <span>Tolerance < ±0.02 mm</span>
+              <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-blue-600 dark:text-blue-400 font-semibold">
+                <span>Tolerance &lt; ±0.02 mm</span>
                 <span>Learn Details →</span>
               </div>
             </div>
           </div>
 
           <!-- Editorial Panel 2: Reliable Maintenance -->
-          <div class="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 flex flex-col transition duration-300 hover:border-blue-500/50">
+          <div class="card-contrast-heroic flex flex-col group">
             <div class="h-64 overflow-hidden relative">
               <img src="assets/images/home-2/expertise-drivetrain.jpg" alt="Bicycle drivetrain repair stand in modern workshop" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-transparent to-transparent"></div>
               <span class="absolute top-4 left-4 badge bg-emerald-600 text-white text-xs">Pillar 02</span>
             </div>
             <div class="p-6 md:p-8 flex flex-col flex-grow">
-              <h3 class="text-xl font-bold text-white mb-3">Reliable Cycle Drivetrain Care</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Reliable Cycle Drivetrain Care</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
                 Ultrasonic degreasing, chain elongation laser verification, bearing race repackaging, and electronic Di2 / AXS wireless shifter micro-adjustments.
               </p>
-              <div class="mt-auto pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-emerald-400 font-semibold">
+              <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
                 <span>Zero Chain Slip</span>
                 <span>Learn Details →</span>
               </div>
@@ -236,18 +237,18 @@
           </div>
 
           <!-- Editorial Panel 3: Performance Adjustments -->
-          <div class="group bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 flex flex-col transition duration-300 hover:border-blue-500/50">
+          <div class="card-contrast-heroic flex flex-col group">
             <div class="h-64 overflow-hidden relative">
               <img src="assets/images/home-2/expertise-suspension.jpg" alt="Automotive and cycle workshop tool bench with torque wrenches" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-900/75 via-transparent to-transparent"></div>
               <span class="absolute top-4 left-4 badge bg-indigo-600 text-white text-xs">Pillar 03</span>
             </div>
             <div class="p-6 md:p-8 flex flex-col flex-grow">
-              <h3 class="text-xl font-bold text-white mb-3">Braking & Suspension Tuning</h3>
-              <p class="text-slate-400 text-sm leading-relaxed mb-6">
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Braking & Suspension Tuning</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
                 DOT 4/5.1 and mineral oil vacuum bleeds, rotor truing, fork stanchion seal rebuilds, and custom preload sag setup matched to rider weight and geometry.
               </p>
-              <div class="mt-auto pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-indigo-400 font-semibold">
+              <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs text-indigo-600 dark:text-indigo-400 font-semibold">
                 <span>DOT Certified Fluid</span>
                 <span>Learn Details →</span>
               </div>
@@ -262,22 +263,22 @@
       <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-5">
-            <span class="eyebrow text-blue-400">Our Facility</span>
-            <h2 class="text-white">Inside the Workshop</h2>
+            <span class="eyebrow">Our Facility</span>
+            <h2>Inside the Workshop</h2>
             <div class="blue-accent-line"></div>
-            <p class="text-slate-300 leading-relaxed mb-6">
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
               Step inside our central service hub. Designed from the ground up like a motorsport pit paddock, each dedicated bay features pneumatic lifts, shadow-board tools, ultrasonic cleaning vats, and digital torque testers.
             </p>
 
-            <ul class="space-y-3 text-sm text-slate-400 mb-8">
+            <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 mb-8">
               <li class="flex items-center gap-3">
-                <i class="fa-solid fa-check text-blue-400"></i> Dedicated clean rooms for suspension and hydraulic bleeds
+                <i class="fa-solid fa-check text-blue-600 dark:text-blue-400"></i> Dedicated clean rooms for suspension and hydraulic bleeds
               </li>
               <li class="flex items-center gap-3">
-                <i class="fa-solid fa-check text-blue-400"></i> High-definition inspection cameras for frame integrity scans
+                <i class="fa-solid fa-check text-blue-600 dark:text-blue-400"></i> High-definition inspection cameras for frame integrity scans
               </li>
               <li class="flex items-center gap-3">
-                <i class="fa-solid fa-check text-blue-400"></i> Temperature-controlled storage for synthetic fluids and seals
+                <i class="fa-solid fa-check text-blue-600 dark:text-blue-400"></i> Temperature-controlled storage for synthetic fluids and seals
               </li>
             </ul>
 
@@ -288,13 +289,13 @@
 
           <!-- Overlapping Gallery Grid -->
           <div class="lg:col-span-7 grid grid-cols-2 gap-4 relative">
-            <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-64">
+            <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 h-64">
               <img src="assets/images/home-2/gallery-bmw.jpg" alt="Specialized motorcycle repair bay" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
             </div>
-            <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-64 mt-8">
+            <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 h-64 mt-8">
               <img src="assets/images/home-2/gallery-velo.jpg" alt="Bicycle assembly workstation" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
             </div>
-            <div class="col-span-2 rounded-2xl overflow-hidden shadow-xl border border-slate-800 h-56">
+            <div class="col-span-2 rounded-2xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 h-56">
               <img src="assets/images/home-2/gallery-tools.jpg" alt="Comprehensive precision workshop tool collection" class="w-full h-full object-cover hover:scale-105 transition duration-500" />
             </div>
           </div>
@@ -303,31 +304,31 @@
     </section>
 
     <!-- Section 04 – Mechanical Care Explained (Interactive Diagram & Tabs) -->
-    <section class="section bg-slate-900/40 border-t border-b border-slate-800" id="mechanical-care">
+    <section class="section section-contrast-alt" id="mechanical-care">
       <div class="container">
         <div class="section-title text-center max-w-2xl mx-auto">
-          <span class="eyebrow text-blue-400">Rider Education</span>
-          <h2 class="text-white">Mechanical Care Explained</h2>
-          <p class="text-slate-400">Understand the physics of your machinery. Click each component to learn when maintenance is critical.</p>
+          <span class="eyebrow">Rider Education</span>
+          <h2>Mechanical Care Explained</h2>
+          <p class="text-slate-600 dark:text-slate-400">Understand the physics of your machinery. Click each component to learn when maintenance is critical.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <!-- Left: Mechanical Image with Interactive Hotspots -->
-          <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
+          <div class="lg:col-span-6 relative rounded-3xl overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl">
             <img src="assets/images/home-2/gear-macro.jpg" alt="Macro view of bicycle and motorcycle gear cassette teeth" class="w-full h-[480px] object-cover" />
-            <div class="absolute inset-0 bg-slate-950/40"></div>
+            <div class="absolute inset-0 bg-slate-950/20 dark:bg-slate-950/40"></div>
 
             <!-- Hotspot indicators on diagram -->
-            <button class="absolute top-[35%] left-[45%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer" data-diagram-tab="chain" aria-label="Inspect Chain">
+            <button class="absolute top-[35%] left-[45%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer ring-4 ring-blue-400/60 scale-110 transition-transform" data-diagram-tab="chain" aria-label="Inspect Chain">
               1
             </button>
-            <button class="absolute top-[60%] left-[30%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer" data-diagram-tab="brakes" aria-label="Inspect Brakes">
+            <button class="absolute top-[60%] left-[30%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer transition-transform" data-diagram-tab="brakes" aria-label="Inspect Brakes">
               2
             </button>
-            <button class="absolute top-[75%] left-[70%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer" data-diagram-tab="tyres" aria-label="Inspect Tyres">
+            <button class="absolute top-[75%] left-[70%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer transition-transform" data-diagram-tab="tyres" aria-label="Inspect Tyres">
               3
             </button>
-            <button class="absolute top-[20%] left-[65%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer" data-diagram-tab="servicing" aria-label="Inspect Servicing">
+            <button class="absolute top-[20%] left-[65%] w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs pulse-glow border-2 border-white shadow-lg cursor-pointer transition-transform" data-diagram-tab="servicing" aria-label="Inspect Servicing">
               4
             </button>
           </div>
@@ -336,68 +337,68 @@
           <div class="lg:col-span-6">
             <!-- Tabs -->
             <div class="grid grid-cols-2 gap-3 mb-6">
-              <button class="p-3 text-left rounded-xl border border-slate-700 font-bold text-xs uppercase tracking-wider text-slate-300 transition active bg-blue-50 dark:bg-slate-800 border-blue-600 text-blue-400" data-diagram-tab="chain">
+              <button class="p-3 text-left rounded-xl border border-blue-600 bg-blue-50 text-blue-700 dark:bg-slate-800 dark:text-blue-400 dark:border-blue-500 font-bold text-xs uppercase tracking-wider transition active shadow-sm" data-diagram-tab="chain">
                 1. Chain Dynamics
               </button>
-              <button class="p-3 text-left rounded-xl border border-slate-700 font-bold text-xs uppercase tracking-wider text-slate-300 transition" data-diagram-tab="brakes">
+              <button class="p-3 text-left rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition" data-diagram-tab="brakes">
                 2. Brake Wear Limits
               </button>
-              <button class="p-3 text-left rounded-xl border border-slate-700 font-bold text-xs uppercase tracking-wider text-slate-300 transition" data-diagram-tab="tyres">
+              <button class="p-3 text-left rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition" data-diagram-tab="tyres">
                 3. Tyre Degradation
               </button>
-              <button class="p-3 text-left rounded-xl border border-slate-700 font-bold text-xs uppercase tracking-wider text-slate-300 transition" data-diagram-tab="servicing">
+              <button class="p-3 text-left rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 font-bold text-xs uppercase tracking-wider text-slate-700 dark:text-slate-300 hover:border-blue-400 dark:hover:border-blue-500 transition" data-diagram-tab="servicing">
                 4. Routine Servicing
               </button>
             </div>
 
             <!-- Panel 1: Chain -->
-            <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800" data-diagram-panel="chain">
-              <span class="badge bg-blue-500/20 text-blue-400 text-xs mb-3">Topic 01</span>
-              <h3 class="text-xl font-bold text-white mb-3">Why Chain Maintenance Matters</h3>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            <div class="card-contrast-heroic p-6 md:p-8" data-diagram-panel="chain">
+              <span class="badge badge-blue text-xs mb-3">Topic 01</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Why Chain Maintenance Matters</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
                 Chains do not physically stretch; rather, their internal pins and bushings wear down, increasing the pitch distance between links. A worn chain cuts sharp 'shark-fin' valleys into your cassette and chainrings, eventually causing chain skip under load.
               </p>
-              <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-400">
-                <strong class="text-white block mb-1">Workshop Threshold:</strong>
+              <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white block mb-1">Workshop Threshold:</strong>
                 Replace bicycle chains at 0.5% elongation to preserve expensive sprockets. On motorcycles, check sag tension every 800 km.
               </div>
             </div>
 
             <!-- Panel 2: Brakes -->
-            <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800" data-diagram-panel="brakes" style="display:none;">
-              <span class="badge bg-amber-500/20 text-amber-400 text-xs mb-3">Topic 02</span>
-              <h3 class="text-xl font-bold text-white mb-3">When Brakes Need Immediate Inspection</h3>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            <div class="card-contrast-heroic p-6 md:p-8" data-diagram-panel="brakes" style="display:none;">
+              <span class="badge bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-400 text-xs mb-3">Topic 02</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">When Brakes Need Immediate Inspection</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
                 Hydraulic brake levers that pull squishy against the handlebar indicate moisture contamination or vapor bubbles in brake fluid. Metal-on-metal squealing means pad friction material is below the 1.5mm safety backing plate limit.
               </p>
-              <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-400">
-                <strong class="text-white block mb-1">Workshop Threshold:</strong>
+              <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white block mb-1">Workshop Threshold:</strong>
                 Full hydraulic fluid flush every 12 months; disc pads replaced when thickness drops under 1.5mm.
               </div>
             </div>
 
             <!-- Panel 3: Tyres -->
-            <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800" data-diagram-panel="tyres" style="display:none;">
-              <span class="badge bg-emerald-500/20 text-emerald-400 text-xs mb-3">Topic 03</span>
-              <h3 class="text-xl font-bold text-white mb-3">Signs of Critical Tyre Wear</h3>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            <div class="card-contrast-heroic p-6 md:p-8" data-diagram-panel="tyres" style="display:none;">
+              <span class="badge badge-green text-xs mb-3">Topic 03</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Signs of Critical Tyre Wear</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
                 Micro-cracks along the tyre sidewall indicate ozone dry rot. Flat-spotting in the center reduces cornering grip, while embedded flint shards lead to high-speed blowouts.
               </p>
-              <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-400">
-                <strong class="text-white block mb-1">Workshop Threshold:</strong>
+              <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white block mb-1">Workshop Threshold:</strong>
                 Inspect tread depth indicators and check air pressure weekly using a calibrated digital manometer.
               </div>
             </div>
 
             <!-- Panel 4: Servicing -->
-            <div class="bg-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800" data-diagram-panel="servicing" style="display:none;">
-              <span class="badge bg-indigo-500/20 text-indigo-400 text-xs mb-3">Topic 04</span>
-              <h3 class="text-xl font-bold text-white mb-3">Why Regular Servicing Prevents Costly Failures</h3>
-              <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            <div class="card-contrast-heroic p-6 md:p-8" data-diagram-panel="servicing" style="display:none;">
+              <span class="badge bg-indigo-100 text-indigo-800 dark:bg-indigo-500/20 dark:text-indigo-400 text-xs mb-3">Topic 04</span>
+              <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Why Regular Servicing Prevents Costly Failures</h3>
+              <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4">
                 Preventive bearing repacks, cable housing lubrications, and spoke tension balances cost a fraction of replacing stripped freehubs, blown head gaskets, or cracked alloy rims.
               </p>
-              <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-xs text-slate-400">
-                <strong class="text-white block mb-1">Workshop Threshold:</strong>
+              <div class="p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white block mb-1">Workshop Threshold:</strong>
                 Complete overhaul every 5,000 km or annually, whichever comes first.
               </div>
             </div>
@@ -410,51 +411,51 @@
     <section class="section">
       <div class="container">
         <div class="section-title text-center max-w-2xl mx-auto">
-          <span class="eyebrow text-blue-400">Technical Breakdown</span>
-          <h2 class="text-white">Service Level Comparison</h2>
-          <p class="text-slate-400">An educational comparison of what is performed during Basic, Regular, and Advanced workshop maintenance.</p>
+          <span class="eyebrow">Technical Breakdown</span>
+          <h2>Service Level Comparison</h2>
+          <p class="text-slate-600 dark:text-slate-400">An educational comparison of what is performed during Basic, Regular, and Advanced workshop maintenance.</p>
         </div>
 
-        <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950 shadow-2xl">
-          <table class="w-full text-left text-sm text-slate-300">
-            <thead class="bg-slate-900 text-white font-bold text-xs uppercase tracking-wider border-b border-slate-800">
+        <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-xl dark:shadow-2xl">
+          <table class="w-full text-left text-sm text-slate-700 dark:text-slate-300">
+            <thead class="bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white font-bold text-xs uppercase tracking-wider border-b border-slate-200 dark:border-slate-800">
               <tr>
-                <th class="p-5">Inspection & Maintenance Item</th>
+                <th class="p-5">Inspection &amp; Maintenance Item</th>
                 <th class="p-5 text-center">Basic Service</th>
                 <th class="p-5 text-center">Regular Service</th>
-                <th class="p-5 text-center bg-blue-900/30 text-blue-300">Advanced Maintenance</th>
+                <th class="p-5 text-center bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">Advanced Maintenance</th>
               </tr>
             </thead>
-            <tbody class="divide-y divide-slate-800/60">
-              <tr class="hover:bg-slate-900/40">
-                <td class="p-5 font-semibold text-white">Visual 20-Point Safety Inspection</td>
-                <td class="p-5 text-center text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
-                <td class="p-5 text-center text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
-                <td class="p-5 text-center text-emerald-400 bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
+            <tbody class="divide-y divide-slate-200 dark:divide-slate-800/60">
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                <td class="p-5 font-semibold text-slate-900 dark:text-white">Visual 20-Point Safety Inspection</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400 bg-blue-50/60 dark:bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
               </tr>
-              <tr class="hover:bg-slate-900/40">
-                <td class="p-5 font-semibold text-white">Brake Pad & Lever Modulation Check</td>
-                <td class="p-5 text-center text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
-                <td class="p-5 text-center text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
-                <td class="p-5 text-center text-emerald-400 bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                <td class="p-5 font-semibold text-slate-900 dark:text-white">Brake Pad &amp; Lever Modulation Check</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400 bg-blue-50/60 dark:bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
               </tr>
-              <tr class="hover:bg-slate-900/40">
-                <td class="p-5 font-semibold text-white">Chain Cleaning & Precision Tensioning</td>
-                <td class="p-5 text-center text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
-                <td class="p-5 text-center text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
-                <td class="p-5 text-center text-emerald-400 bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                <td class="p-5 font-semibold text-slate-900 dark:text-white">Chain Cleaning &amp; Precision Tensioning</td>
+                <td class="p-5 text-center text-slate-400 dark:text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400 bg-blue-50/60 dark:bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
               </tr>
-              <tr class="hover:bg-slate-900/40">
-                <td class="p-5 font-semibold text-white">Detailed Ultrasonic Degreasing</td>
-                <td class="p-5 text-center text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
-                <td class="p-5 text-center text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
-                <td class="p-5 text-center text-emerald-400 bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                <td class="p-5 font-semibold text-slate-900 dark:text-white">Detailed Ultrasonic Degreasing</td>
+                <td class="p-5 text-center text-slate-400 dark:text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400"><i class="fa-solid fa-check"></i> Yes</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400 bg-blue-50/60 dark:bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
               </tr>
-              <tr class="hover:bg-slate-900/40">
-                <td class="p-5 font-semibold text-white">Advanced Torque, Valve & Dial Adjustments</td>
-                <td class="p-5 text-center text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
-                <td class="p-5 text-center text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
-                <td class="p-5 text-center text-emerald-400 bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
+              <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/40">
+                <td class="p-5 font-semibold text-slate-900 dark:text-white">Advanced Torque, Valve &amp; Dial Adjustments</td>
+                <td class="p-5 text-center text-slate-400 dark:text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
+                <td class="p-5 text-center text-slate-400 dark:text-slate-500"><i class="fa-solid fa-minus"></i> No</td>
+                <td class="p-5 text-center text-emerald-600 dark:text-emerald-400 bg-blue-50/60 dark:bg-blue-900/20"><i class="fa-solid fa-check"></i> Yes</td>
               </tr>
             </tbody>
           </table>
@@ -463,12 +464,12 @@
     </section>
 
     <!-- Section 06 – Repair Transformations (Interactive Before/After Slider) -->
-    <section class="section bg-slate-900/50 border-t border-b border-slate-800" id="transformation">
+    <section class="section section-contrast-alt" id="transformation">
       <div class="container">
         <div class="section-title text-center max-w-2xl mx-auto">
-          <span class="eyebrow text-blue-400">Workshop Evidence</span>
-          <h2 class="text-white">Repair Transformations</h2>
-          <p class="text-slate-400">Drag the interactive slider below to reveal the actual before and after workshop results on heavily oxidized components.</p>
+          <span class="eyebrow">Workshop Evidence</span>
+          <h2>Repair Transformations</h2>
+          <p class="text-slate-600 dark:text-slate-400">Drag the interactive slider below to reveal the actual before and after workshop results on heavily oxidized components.</p>
         </div>
 
         <div class="max-w-4xl mx-auto">
@@ -488,33 +489,33 @@
             </div>
 
             <!-- Badges -->
-            <span class="ba-label ba-label-before">Before: Oxidized & Grimy</span>
-            <span class="ba-label ba-label-after">After: Restored & Sealed</span>
+            <span class="ba-label ba-label-before">Before: Oxidized &amp; Grimy</span>
+            <span class="ba-label ba-label-after">After: Restored &amp; Sealed</span>
           </div>
 
           <!-- Secondary Procedure Card -->
           <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex items-center gap-4">
+            <div class="card-contrast-heroic p-5 flex items-center gap-4">
               <img src="assets/images/home-2/before-chain.jpg" alt="Inspection phase" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
               <div>
-                <strong class="text-white text-sm block">1. Diagnostic Influx</strong>
-                <span class="text-xs text-slate-400">30% power loss due to friction</span>
+                <strong class="text-slate-900 dark:text-white text-sm block">1. Diagnostic Influx</strong>
+                <span class="text-xs text-slate-600 dark:text-slate-400">30% power loss due to friction</span>
               </div>
             </div>
 
-            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex items-center gap-4">
+            <div class="card-contrast-heroic p-5 flex items-center gap-4">
               <img src="assets/images/home-2/cleaning-process.jpg" alt="Cleaning bath" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
               <div>
-                <strong class="text-white text-sm block">2. Ultrasonic Solvent Bath</strong>
-                <span class="text-xs text-slate-400">Deep cavity grit extraction</span>
+                <strong class="text-slate-900 dark:text-white text-sm block">2. Ultrasonic Solvent Bath</strong>
+                <span class="text-xs text-slate-600 dark:text-slate-400">Deep cavity grit extraction</span>
               </div>
             </div>
 
-            <div class="bg-slate-950 p-5 rounded-xl border border-slate-800 flex items-center gap-4">
+            <div class="card-contrast-heroic p-5 flex items-center gap-4">
               <img src="assets/images/home-2/after-chain.jpg" alt="Sealed chain" class="w-16 h-16 rounded-lg object-cover flex-shrink-0" />
               <div>
-                <strong class="text-white text-sm block">3. Anti-Corrosion Seal</strong>
-                <span class="text-xs text-slate-400">PTFE molecular lubrication</span>
+                <strong class="text-slate-900 dark:text-white text-sm block">3. Anti-Corrosion Seal</strong>
+                <span class="text-xs text-slate-600 dark:text-slate-400">PTFE molecular lubrication</span>
               </div>
             </div>
           </div>
@@ -527,38 +528,38 @@
       <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div class="lg:col-span-6">
-            <div class="relative rounded-3xl overflow-hidden border border-slate-700 shadow-2xl">
+            <div class="relative rounded-3xl overflow-hidden border-4 border-white dark:border-slate-700 shadow-2xl">
               <img src="assets/images/home-2/technical-team.jpg" alt="Team of certified mechanics in BikeFix repair shop" class="w-full h-[520px] object-cover" />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-              <div class="absolute bottom-6 left-6 right-6">
-                <span class="badge bg-blue-600 text-white text-xs mb-2">ASE & Shimano T.E.C. Certified</span>
-                <p class="text-white font-bold text-base">Over 45 collective years of automotive and cycling craftsmanship.</p>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              <div class="glass-cockpit-card absolute bottom-6 left-6 right-6 p-4 rounded-2xl">
+                <span class="badge bg-blue-600 text-white text-xs mb-2">ASE &amp; Shimano T.E.C. Certified</span>
+                <p class="text-slate-900 dark:text-white font-bold text-base">Over 45 collective years of automotive and cycling craftsmanship.</p>
               </div>
             </div>
           </div>
 
           <div class="lg:col-span-6">
-            <span class="eyebrow text-blue-400">Master Craftsmen</span>
-            <h2 class="text-white">Our Technical Team</h2>
+            <span class="eyebrow">Master Craftsmen</span>
+            <h2>Our Technical Team</h2>
             <div class="blue-accent-line"></div>
-            <p class="text-slate-300 leading-relaxed mb-6">
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
               Our mechanics are passionate riders, former competitive wrench technicians, and certified mechanical engineers. We believe every machine has its own distinct personality and deserves attentive, precise handling.
             </p>
 
             <div class="space-y-4">
-              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                <h4 class="text-white font-bold text-base mb-1">Vikramaditya Rao – Lead Motorcycle Technician</h4>
-                <p class="text-xs text-slate-400">14+ years experience with big-bore multis, hydraulic clutches, and performance fuel injection calibration.</p>
+              <div class="card-contrast-heroic p-4">
+                <h4 class="text-slate-900 dark:text-white font-bold text-base mb-1">Vikramaditya Rao – Lead Motorcycle Technician</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">14+ years experience with big-bore multis, hydraulic clutches, and performance fuel injection calibration.</p>
               </div>
 
-              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                <h4 class="text-white font-bold text-base mb-1">Claire Dubois – Master Bicycle Wheel & Frame Builder</h4>
-                <p class="text-xs text-slate-400">Specialist in carbon acoustic tap testing, electronic group tuning, and sub-millimeter custom wheel truing.</p>
+              <div class="card-contrast-heroic p-4">
+                <h4 class="text-slate-900 dark:text-white font-bold text-base mb-1">Claire Dubois – Master Bicycle Wheel &amp; Frame Builder</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">Specialist in carbon acoustic tap testing, electronic group tuning, and sub-millimeter custom wheel truing.</p>
               </div>
 
-              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                <h4 class="text-white font-bold text-base mb-1">Workshop Working Principles</h4>
-                <p class="text-xs text-slate-400">1. Measure twice, torque once. 2. Replace only what is truly worn. 3. Safety over speed in every single repair.</p>
+              <div class="card-contrast-heroic p-4">
+                <h4 class="text-slate-900 dark:text-white font-bold text-base mb-1">Workshop Working Principles</h4>
+                <p class="text-xs text-slate-600 dark:text-slate-400">1. Measure twice, torque once. 2. Replace only what is truly worn. 3. Safety over speed in every single repair.</p>
               </div>
             </div>
           </div>
@@ -567,20 +568,21 @@
     </section>
 
     <!-- Section 08 – Final Premium CTA (Large Scenic Image Banner) -->
-    <section class="relative py-28 overflow-hidden bg-slate-950 border-t border-slate-800" id="booking">
-      <div class="absolute inset-0 z-0">
-        <img src="assets/images/home-2/scenic-ride-cta.jpg" alt="Rider cruising on a scenic winding mountain road" class="w-full h-full object-cover opacity-35" />
-        <div class="absolute inset-0 bg-gradient-to-t from-[#080E1A] via-slate-950/70 to-[#080E1A]"></div>
+    <section class="hero-automotive-stage relative py-28 overflow-hidden border-t border-slate-200 dark:border-slate-800" id="booking">
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="assets/images/home-2/scenic-ride-cta.jpg" alt="Rider cruising on a scenic winding mountain road" class="w-full h-full object-cover opacity-20 dark:opacity-35 transition-all duration-300" />
+        <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-white/80 to-white/95 dark:from-[#080E1A] dark:via-slate-950/75 dark:to-[#080E1A] transition-all duration-300"></div>
       </div>
 
       <div class="container relative z-10 text-center max-w-3xl mx-auto">
-        <span class="badge bg-blue-600/30 text-blue-300 uppercase tracking-widest text-xs px-4 py-1.5 mb-6 border border-blue-500/40">
+        <span class="inline-flex items-center gap-2 badge bg-blue-50 text-blue-700 border border-blue-200 dark:bg-blue-600/30 dark:text-blue-300 dark:border-blue-500/40 uppercase tracking-widest text-xs px-4 py-1.5 mb-6">
+          <span class="beacon-dot bg-blue-600 dark:bg-blue-400"></span>
           Uncompromised Roadworthiness
         </span>
-        <h2 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+        <h2 class="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 leading-tight">
           Every Journey Starts With a Well-Maintained Ride.
         </h2>
-        <p class="text-slate-300 text-lg mb-10 leading-relaxed">
+        <p class="text-slate-600 dark:text-slate-300 text-lg mb-10 leading-relaxed">
           Book an inspection today. Discover the peace of mind that comes from knowing every bolt, bearing, and cable was tuned to factory specification.
         </p>
 
@@ -596,8 +598,8 @@
     </section>
   </main>
 
-  <!-- Global Footer (Dark Theme) -->
-  <footer class="site-footer bg-slate-950 border-t border-slate-800">
+  <!-- Global Footer -->
+  <footer class="site-footer">
     <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         <div class="lg:col-span-2">

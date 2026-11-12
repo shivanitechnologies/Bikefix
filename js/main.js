@@ -501,17 +501,40 @@ function initPartsCatalogue() {
    8. Home 2: Mechanical Care Diagram Hotspots
    --------------------------------------------------------- */
 function initInteractiveDiagram() {
-  const hotspotTabs = document.querySelectorAll('[data-diagram-tab]');
+  const allTriggers = document.querySelectorAll('[data-diagram-tab]');
+  const tabButtons = document.querySelectorAll('.grid [data-diagram-tab]');
+  const hotspotDots = document.querySelectorAll('button.rounded-full[data-diagram-tab]');
   const diagramPanels = document.querySelectorAll('[data-diagram-panel]');
 
-  if (hotspotTabs.length === 0) return;
+  if (allTriggers.length === 0) return;
 
-  hotspotTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.diagramTab;
+  allTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const target = trigger.dataset.diagramTab;
 
-      hotspotTabs.forEach(t => t.classList.remove('active', 'border-blue-600', 'bg-blue-50', 'dark:bg-slate-800'));
-      tab.classList.add('active', 'border-blue-600', 'bg-blue-50', 'dark:bg-slate-800');
+      tabButtons.forEach(btn => {
+        const isTarget = btn.dataset.diagramTab === target;
+        btn.classList.toggle('active', isTarget);
+        btn.classList.toggle('border-blue-600', isTarget);
+        btn.classList.toggle('bg-blue-50', isTarget);
+        btn.classList.toggle('text-blue-700', isTarget);
+        btn.classList.toggle('dark:bg-slate-800', isTarget);
+        btn.classList.toggle('dark:text-blue-400', isTarget);
+        btn.classList.toggle('dark:border-blue-500', isTarget);
+        btn.classList.toggle('shadow-sm', isTarget);
+
+        btn.classList.toggle('border-slate-200', !isTarget);
+        btn.classList.toggle('dark:border-slate-700', !isTarget);
+        btn.classList.toggle('text-slate-700', !isTarget);
+        btn.classList.toggle('dark:text-slate-300', !isTarget);
+      });
+
+      hotspotDots.forEach(dot => {
+        const isTarget = dot.dataset.diagramTab === target;
+        dot.classList.toggle('ring-4', isTarget);
+        dot.classList.toggle('ring-blue-400/60', isTarget);
+        dot.classList.toggle('scale-110', isTarget);
+      });
 
       diagramPanels.forEach(panel => {
         panel.style.display = panel.dataset.diagramPanel === target ? 'block' : 'none';
