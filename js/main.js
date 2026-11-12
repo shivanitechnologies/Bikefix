@@ -581,6 +581,26 @@ function initFormDemonstrations() {
   const enquiryForms = document.querySelectorAll('form[data-enquiry-form]');
   const authForms = document.querySelectorAll('form[data-auth-form]');
 
+  // Pre-fill dedicated Book Service form from URL query params & enforce minimum date
+  if (bookingForms.length) {
+    const params = new URLSearchParams(window.location.search);
+    const paramVehicle = params.get('vehicle');
+    const paramService = params.get('service');
+    const todayIso = new Date().toISOString().split('T')[0];
+
+    bookingForms.forEach(form => {
+      const vehSelect = form.querySelector('#book-vehicle');
+      const svcSelect = form.querySelector('#book-service');
+      const dateInput = form.querySelector('#book-date');
+      if (dateInput && !dateInput.min) dateInput.min = todayIso;
+      if (vehSelect && paramVehicle) vehSelect.value = paramVehicle;
+      if (svcSelect && paramService) {
+        const matchOpt = Array.from(svcSelect.options).find(opt => opt.value.toLowerCase() === paramService.toLowerCase());
+        if (matchOpt) svcSelect.value = matchOpt.value;
+      }
+    });
+  }
+
   bookingForms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
