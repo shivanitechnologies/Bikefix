@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initPartsCatalogue();
   initInteractiveDiagram();
   initFormDemonstrations();
-  initPasswordToggles();
   updateCurrentYear();
   initScrollProgressBar();
   initScrollAnimations();
@@ -640,7 +639,6 @@ function initFormDemonstrations() {
   const bookingForms = document.querySelectorAll('form[data-booking-form]');
   const contactForms = document.querySelectorAll('form[data-contact-form]');
   const enquiryForms = document.querySelectorAll('form[data-enquiry-form]');
-  const authForms = document.querySelectorAll('form[data-auth-form]');
 
   // Pre-fill dedicated Book Service form from URL query params & enforce minimum date
   if (bookingForms.length) {
@@ -687,38 +685,10 @@ function initFormDemonstrations() {
       form.reset();
     });
   });
-
-  authForms.forEach(form => {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = form.querySelector('input[type="email"]')?.value || 'user';
-      showToast(`Demo authentication success for ${email}. Redirecting...`);
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 1500);
-    });
-  });
 }
 
 /* ---------------------------------------------------------
-   10. Password Reveal Eye Toggle
-   --------------------------------------------------------- */
-function initPasswordToggles() {
-  document.querySelectorAll('[data-toggle-password], .password-toggle-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const input = btn.parentElement.querySelector('input');
-      if (!input) return;
-      const isPass = input.type === 'password';
-      input.type = isPass ? 'text' : 'password';
-      btn.innerHTML = isPass
-        ? '<i class="fa-regular fa-eye-slash" aria-hidden="true"></i>'
-        : '<i class="fa-regular fa-eye" aria-hidden="true"></i>';
-    });
-  });
-}
-
-/* ---------------------------------------------------------
-   11. Toast Notifications
+   10. Toast Notifications
    --------------------------------------------------------- */
 function showToast(message) {
   let toast = document.querySelector('.toast-notice');
@@ -1138,10 +1108,6 @@ function initScrollAnimations() {
       const stackOrFrame = heroRightVisual.querySelector('.hero-card-stack, .rounded-3xl') || heroRightVisual;
       registerTarget(stackOrFrame, 'zoom-in', 140);
     }
-  } else {
-    // Auth Pages (login.html / signup.html)
-    const authCard = document.querySelector('body > div .card-contrast-heroic');
-    if (authCard) registerTarget(authCard, 'zoom-in', 60);
   }
 
   // 2. Process Timeline Conduit Line Draw-In
