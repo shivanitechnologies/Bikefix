@@ -849,159 +849,32 @@ function initHeroCarousel() {
 }
 
 /* ---------------------------------------------------------
-   13b. Home 2 Hero 5-Image PNG Showcase Carousel (4s Auto-Advance)
+   13b. Home 2 Hero 5-Image Transparent PNG Sequence (4s Auto-Advance)
    --------------------------------------------------------- */
 function initHome2HeroCarousel() {
   const heroSection = document.querySelector('[data-home2-hero-carousel]');
   if (!heroSection) return;
 
-  const SLIDES = [
-    {
-      image: 'assets/images/home-2/hero-slide-1.png',
-      tag: '01 / ENGINE TELEMETRY',
-      title: 'Computerized ECU diagnostics & real-time compression mapping.'
-    },
-    {
-      image: 'assets/images/home-2/hero-slide-2.png',
-      tag: '02 / PRECISION WHEEL TRUING',
-      title: 'Sub-0.05 mm lateral runout calibration with digital spoke tensiometers.'
-    },
-    {
-      image: 'assets/images/home-2/hero-slide-3.png',
-      tag: '03 / HYDRAULIC BRAKE CALIBRATION',
-      title: 'Vacuum bleed & CNC caliper torque verification for zero-fade stopping.'
-    },
-    {
-      image: 'assets/images/home-2/hero-slide-4.png',
-      tag: '04 / ULTRASONIC DRIVETRAIN',
-      title: 'High-frequency solvent bath degreasing & laser chain alignment.'
-    },
-    {
-      image: 'assets/images/home-2/hero-slide-5.png',
-      tag: '05 / SUSPENSION DYNO & SEALS',
-      title: 'Inverted fork seal overhaul, nitrogen charging & rebound valving.'
-    }
-  ];
+  const cutouts = Array.from(heroSection.querySelectorAll('[data-home2-cutout]'));
+  if (!cutouts.length) return;
 
   let currentIndex = 0;
-  let autoplayTimer = null;
-  const slideCount = SLIDES.length;
 
-  const activeImgEl = heroSection.querySelector('#home2-hero-active-img');
-  const previewImgEl = heroSection.querySelector('#home2-hero-preview-img');
-  const activeTagEl = heroSection.querySelector('#home2-hero-active-tag');
-  const activeTitleEl = heroSection.querySelector('#home2-hero-active-title');
-  const dotsContainer = heroSection.querySelector('#home2-hero-dots-container');
-  const nextBtn = heroSection.querySelector('.hero-nav-next');
-  const prevBtn = heroSection.querySelector('.hero-nav-prev');
-
-  function renderSlide(index, instant = false) {
-    const slide = SLIDES[index];
-    const nextSlideData = SLIDES[(index + 1) % slideCount];
-
-    if (activeImgEl) {
-      if (instant) {
-        activeImgEl.src = slide.image;
-        activeImgEl.alt = slide.tag;
-        activeImgEl.style.opacity = '1';
-        activeImgEl.style.transform = 'scale(1)';
-      } else {
-        activeImgEl.style.opacity = '0.35';
-        activeImgEl.style.transform = 'scale(0.97)';
-        setTimeout(() => {
-          activeImgEl.src = slide.image;
-          activeImgEl.alt = slide.tag;
-          activeImgEl.style.opacity = '1';
-          activeImgEl.style.transform = 'scale(1)';
-        }, 160);
-      }
-    }
-
-    if (activeTagEl) activeTagEl.textContent = slide.tag;
-    if (activeTitleEl) activeTitleEl.textContent = slide.title;
-
-    if (previewImgEl) {
-      previewImgEl.src = nextSlideData.image;
-      previewImgEl.alt = nextSlideData.tag;
-    }
-
-    if (dotsContainer) {
-      dotsContainer.querySelectorAll('.hero-dot-indicator').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-        dot.setAttribute('aria-selected', i === index ? 'true' : 'false');
-      });
-    }
-
+  function showCutout(index) {
+    cutouts.forEach((img, i) => {
+      const isActive = i === index;
+      img.classList.toggle('opacity-100', isActive);
+      img.classList.toggle('scale-100', isActive);
+      img.classList.toggle('opacity-0', !isActive);
+      img.classList.toggle('scale-95', !isActive);
+    });
     currentIndex = index;
   }
 
-  function nextSlide() {
-    renderSlide((currentIndex + 1) % slideCount);
-  }
-
-  function prevSlide() {
-    renderSlide((currentIndex - 1 + slideCount) % slideCount);
-  }
-
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayTimer = setInterval(nextSlide, 4000);
-  }
-
-  function stopAutoplay() {
-    if (autoplayTimer) {
-      clearInterval(autoplayTimer);
-      autoplayTimer = null;
-    }
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      nextSlide();
-      startAutoplay();
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      prevSlide();
-      startAutoplay();
-    });
-  }
-
-  if (dotsContainer) {
-    dotsContainer.querySelectorAll('.hero-dot-indicator').forEach((dot, idx) => {
-      dot.addEventListener('click', (e) => {
-        e.preventDefault();
-        renderSlide(idx);
-        startAutoplay();
-      });
-    });
-  }
-
-  heroSection.addEventListener('mouseenter', stopAutoplay);
-  heroSection.addEventListener('mouseleave', startAutoplay);
-
-  let touchStartX = 0;
-  heroSection.addEventListener('touchstart', (e) => {
-    if (e.touches && e.touches[0]) touchStartX = e.touches[0].clientX;
-  }, { passive: true });
-
-  heroSection.addEventListener('touchend', (e) => {
-    if (e.changedTouches && e.changedTouches[0]) {
-      const diffX = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(diffX) > 40) {
-        if (diffX < 0) nextSlide();
-        else prevSlide();
-        startAutoplay();
-      }
-    }
-  }, { passive: true });
-
-  renderSlide(0, true);
-  startAutoplay();
+  showCutout(0);
+  setInterval(() => {
+    showCutout((currentIndex + 1) % cutouts.length);
+  }, 4000);
 }
 
 /* ---------------------------------------------------------
